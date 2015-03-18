@@ -1,13 +1,15 @@
 
+$container-width: 1000px;
+
+
 $light: 300;
 $regular: 400;
-$medium: 500;
-$bold: 600;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
 
 $black: #000000;
 $white: #ffffff;
 $gray: #2f2f2f;
 
-$desktop: "only screen and (max-width : 1199px)";
-$tablet: "only screen and (max-width : 991px)";
-$mobile: "only screen and (max-width : 767px)";
+

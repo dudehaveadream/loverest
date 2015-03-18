@@ -1,0 +1,71 @@
+.header {
+    &-section {
+        background: url(../img/bg/header_bg.jpg);
+        border-bottom: 1px solid #b3bcc0;
+        @include box-shadow (0 1px 0 #d7e1e6);
+    }
+    &-visible {
+        padding: 15px 0;
+        .logo {
+            border: none;
+        }
+    }
+}
+
+.search-section {
+    padding: 10px 0;
+    background: #e8f3f8;
+    border-bottom: 1px solid #dfe9f1;
+    -webkit-box-shadow: 0 1px 0 #ecf2f7,
+                0 2px 0 #f6f8fb,
+                0 3px 0 #fcfdfe;
+    -moz-box-shadow: 0 1px 0 #ecf2f7,
+                0 2px 0 #f6f8fb,
+                0 3px 0 #fcfdfe;
+    box-shadow: 0 1px 0 #ecf2f7,
+                0 2px 0 #f6f8fb,
+                0 3px 0 #fcfdfe;
+    .container {
+        @include clearfix;
+    }
+    .input-holder {
+        width: 625px;
+        float: left;
+        position: relative;
+        input[type="text"] {
+            width: 100%;
+            height: 32px;
+            padding: 0 110px 0 40px;
+            background: url(../img/icons/search.png) center left 10px no-repeat, #ffffff;
+            outline: none;
+            border: 1px solid #c5cfd3;
+            -moz-box-shadow: inset 0 1px 4px rgba(0,0,0,.2),
+                        0 1px 0 $white;
+            -webkit-box-shadow: inset 0 1px 4px rgba(0,0,0,.2),
+                        0 1px 0 $white;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,.2),
+                        0 1px 0 $white;
+            @include border-radius (20px);
+        }
+        input[type="submit"] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 31px;
+            padding: 0;
+            width: 102px;
+        }
+    }
+    p.result {
+        display: inline-block;
+        font-weight: $semibold;
+        margin-left: 25px;
+        padding-top: 3px;
+        color: #303030;
+        span {
+            font-size: 24px;
+            font-weight: $bold;
+            margin-right: 5px;
+        }
+    }
+}

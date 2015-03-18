@@ -7,15 +7,392 @@
     <meta charset="utf-8">
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,300,600,700,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/bxslider.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                mode: 'fade',
+                auto: true,
+                captions: true
+            });
+            $('.carousel-horizontal').bxSlider({
+                slideWidth: 330,
+                minSlides: 3,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideMargin: 10,
+                pager: false
+            });
+            $('.carousel-verical').bxSlider({
+                mode: 'vertical',
+                slideWidth: 480,
+                minSlides: 2,
+                maxSlides: 2,
+                moveSlides: 1,
+                slideMargin: 15,
+                pager: false
+            });
+        });
+    </script>
 </head>
 <body>
 
+<div class="header-section">
+    <div class="container">
+        <div class="header-visible">
+            <a href="#" class="logo"><img src="img/logo.jpg" alt=""></a>
+        </div>
+    </div>
+</div><!-- Header end -->
+
+<div class="section search-section">
+    <div class="container">
+        <div class="input-holder">
+            <input type="text" placeholder="Поиск по названию, месту расположения или типу заведения">
+            <input type="submit" class="btn btn-orange" value="поиск">
+        </div>
+        <p class="result"><span>123 456</span>успешных заказов</p>
+    </div>
+</div><!-- Search end -->
+
+<div class="section slider-section">
+    <div class="container">
+        <ul class="slider">
+        <li>
+            <img src="img/slider/slide1.png" />
+            <div class="text-holder">
+                <h1>Лучший выбор</h1>
+                <p>Все ваши любимые заведения собраны в одном месте !</p>
+            </div>
+        </li>
+        <li>
+            <img src="img/slider/slide2.png" />
+            <div class="text-holder">
+                <h1>Lorem</h1>
+                <p>Ipsum text</p>
+            </div>
+        </li>
+
+        </ul>
+    </div>
+</div><!-- Slider end -->
+
+<div class="section categories-section">
+    <div class="container">
+        <div class="categories-inner">
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-first">
+                        <img src="img/categories/1.png" class="stat">
+                        <img src="img/categories/1h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Рестораны, караоке</p>
+                </a>
+            </div>
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-second">
+                        <img src="img/categories/2.png" class="stat">
+                        <img src="img/categories/2h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Банкеты</p>
+                </a>
+            </div>
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-third">
+                        <img src="img/categories/3.png" class="stat">
+                        <img src="img/categories/3h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Салоны красоты</p>
+                </a>
+            </div>
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-fourth">
+                        <img src="img/categories/4.png" class="stat">
+                        <img src="img/categories/4h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Зоны отдыха</p>
+                </a>
+            </div>
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-fifth">
+                        <img src="img/categories/5.png" class="stat">
+                        <img src="img/categories/5h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Бани и сауны</p>
+                </a>
+            </div>
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-sixth">
+                        <img src="img/categories/6.png" class="stat">
+                        <img src="img/categories/6h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Бильярд</p>
+                </a>
+            </div>
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-seventh">
+                        <img src="img/categories/7.png" class="stat">
+                        <img src="img/categories/7h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Доставка еды</p>
+                </a>
+            </div>
+            <div class="categories-item">
+                <a href="#" class="categories-item-inner">
+                    <div class="image-holder image-holder-eighth">
+                        <img src="img/categories/8.png" class="stat">
+                        <img src="img/categories/8h.png" class="hov">
+                    </div>
+                    <p class="btn btn-white">Доставка цветов</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div><!-- Categories end -->
+
+<div class="section offers-section">
+    <div class="container">
+        <h2>Лучшие предложения</h2>
+        <div class="carousel-horizontal">
+            <div class="slide">
+                <div class=" offer-item">
+                    <div class="image-holder">
+                        <img src="img/slider/carousel1.jpg" alt="">
+                        <div class="discount">- 20%</div>
+                    </div>
+                    <div class="offer-item-content">
+                        <h5>The Kitchen</h5>
+                        <p>При заказе от 1500 руб. Паста Карбонара в подарок!</p>
+                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        <a href="#" class="btn btn-orange">подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class=" offer-item">
+                    <div class="image-holder">
+                        <img src="img/slider/carousel2.jpg" alt="">
+                        <div class="discount">- 50%</div>
+                    </div>
+                    <div class="offer-item-content">
+                        <h5>0.75</h5>
+                        <p>При заказе от 0.75. Еще 0,5 в подарок!</p>
+                        <div class="likes"><span class="like"></span><span class="count">137</span></div>
+                        <a href="#" class="btn btn-orange">подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class=" offer-item">
+                    <div class="image-holder">
+                        <img src="img/slider/carousel3.jpg" alt="">
+                        <div class="discount">- 35%</div>
+                    </div>
+                    <div class="offer-item-content">
+                        <h5>Пиворама на Московском проспекте</h5>
+                        <p>Ведро пива самой веселой тусовке!</p>
+                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        <a href="#" class="btn btn-orange">подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Offers end -->
+
+<div class="section news-section">
+    <div class="container">
+        <h2>Новости</h2>
+        <div class="news-section-inner">
+            <div class="left">
+                <div class="left-item">
+                    <div class="image-holder"><img src="img/news/1.jpg" alt=""></div>
+                    <div class="text-holder">
+                        <p><span>Александра</span> написала новый отзыв о ресторане <a href="#">Пиворама на Московском проспекте</a></p>
+                        <p class="rating">всего 27004 положительные и 2902 отрицательные оценки</p>
+                    </div>
+                </div>
+                <div class="left-item">
+                    <div class="image-holder"><img src="img/news/2.jpg" alt=""></div>
+                    <div class="text-holder">
+                        <p><span>Иван</span> изучает меню ресторана <a href="#">Абракадабра</a></p>
+                        <p class="rating">всего 27004 положительные и 2902 отрицательные оценки</p>
+                    </div>
+                </div>
+                <div class="left-item">
+                    <div class="image-holder"><img src="img/news/3.jpg" alt=""></div>
+                    <div class="text-holder">
+                        <p><span>Александра</span> написала новый отзыв о ресторане <a href="#">Пиворама на Московском проспекте</a></p>
+                        <p class="rating">всего 27004 положительные и 2902 отрицательные оценки</p>
+                    </div>
+                </div>
+                <div class="left-item">
+                    <div class="image-holder"><img src="img/news/4.jpg" alt=""></div>
+                    <div class="text-holder">
+                        <p><span>Николай</span> изучает меню ресторана <a href="#">Посидим</a></p>
+                        <p class="rating">всего 27004 положительные и 2902 отрицательные оценки</p>
+                    </div>
+                </div>
+                <div class="left-item">
+                    <div class="image-holder"><img src="img/news/5.jpg" alt=""></div>
+                    <div class="text-holder">
+                        <p><span>Людмила</span> изучает меню ресторана <a href="#">Вилка ложка</a></p>
+                        <p class="rating">всего 27004 положительные и 2902 отрицательные оценки</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+<div class="carousel-verical">
+  <div class="slide">
+    <div class="vertical-item">
+        <div class="image-holder">
+            <img src="img/news/6.jpg" alt="">
+        </div>
+        <div class="text-holder">
+            <h5>Любимая кафешка</h5>
+            <p>Обновили меню, интерьер и винную карту! Самое время посетить нас! Ведро пива самой веселой тусовке!</p>
+            <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+            <a href="#" class="btn btn-orange">подробнее</a>
+        </div>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="vertical-item">
+        <div class="image-holder">
+            <img src="img/news/7.jpg" alt="">
+        </div>
+        <div class="text-holder">
+            <h5>У нас новые вилки и ложки!</h5>
+            <p>У нас новые вилки и ложки, заходите, протестируйте пожалуйста!</p>
+            <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+            <a href="#" class="btn btn-orange">подробнее</a>
+        </div>
+    </div>
+  </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section mobile-section">
+    <div class="container">
+        <h3>Скоро в открытом доступе на </h3>
+        <a href="#"><img src="img/mobile/appstore.png" alt=""></a>
+        <a href="#"><img src="img/mobile/googleplay.png" alt=""></a>
+        <img src="img/mobile/hand.png" alt="" class="hand">
+    </div>
+</div><!-- Mobile end -->
+
+<div class="section footer-section">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="container">
+                <div class="left">
+                    <div class="left-inner">
+                        <a href="#" class="left-item">
+                            <div class="image-holder"><img src="img/footer/1.png" alt=""></div>
+                            <h5>Акции</h5>
+                            <p>Ни дня без халявы! Наслаждайтесь лучшим сервисом даром!</p>
+                        </a>
+                    </div>
+                    <div class="left-inner">
+                        <a href="#" class="left-item">
+                            <div class="image-holder"><img src="img/footer/2.png" alt=""></div>
+                            <h5>События</h5>
+                            <p>Будьте в курсе всех событий с нами! Не пропустайте тусовок!</p>
+                        </a>
+                    </div>
+                    <div class="left-inner">
+                        <a href="#" class="left-item">
+                            <div class="image-holder"><img src="img/footer/3.png" alt=""></div>
+                            <h5>Блог</h5>
+                            <p>Актульные новости всегда под рукой. Подписывайтесь на  блог!</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3>Love Rest</h3>
+                    <p>«loverest.kz» — это совершенно новый способ получения предварительных заказов. Мы делаем так, чтобы вы экономили свое время и получали самые удобные места в любых заведениях города. Будь это ужин в ресторане или шиномонтаж, поход к стилисту или вечер в киноклубе — «loverest» поможет избежать очереди и получить желаемое именно тогда, когда вам это нужно.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-center">
+            <div class="container">
+                <div class="left">
+                    <div class="left-item">
+                        <h5>Компания</h5>
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Вакансии на loverest</a></li>
+                        </ul>
+                    </div>
+                    <div class="left-item">
+                        <h5>Клиентам</h5>
+                        <ul>
+                            <li><a href="#">Обратная связь</a></li>
+                            <li><a href="#">Как это работает?</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
+                            <li><a href="#">Публичная оферта</a></li>
+                        </ul>
+                    </div>
+                    <div class="left-item">
+                        <h5>Партнерам</h5>
+                        <ul>
+                            <li><a href="#">Для вашего бизнеса</a></li>
+                            <li><a href="#">Франшиза</a></li>
+                            <li><a href="#">Партнерская программа сайтам</a></li>
+                        </ul>
+                    </div>
+                    <div class="left-item">
+                        <h5>Полезные ссылки</h5>
+                        <ul>
+                            <li><a href="#">Рестораны, караоке и.т.д</a></li>
+                            <li><a href="#">Банкеты</a></li>
+                            <li><a href="#">Салоны красоты и мастера</a></li>
+                            <li><a href="#">Зоны отдыха</a></li>
+                            <li><a href="#">Бани, сауны</a></li>
+                            <li><a href="#">Бильярд</a></li>
+                            <li><a href="#">Доставка еды</a></li>
+                            <li><a href="#">Доставка цветов</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="social">
+                        <a href="#"><img src="img/footer/vk.png" alt=""></a>
+                        <a href="#"><img src="img/footer/fb.png" alt=""></a>
+                        <a href="#"><img src="img/footer/mail.png" alt=""></a>
+                        <a href="#"><img src="img/footer/odn.png" alt=""></a>
+                        <a href="#"><img src="img/footer/tw.png" alt=""></a>
+                        <a href="#"><img src="img/footer/insta.png" alt=""></a>
+                        <p>Мы в соц сетях</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2015 Loverest&#8482;  -  <a href="#">Карта сайта</a></p>
+            <p>Все права защищены</p>
+        </div>
+    </div>
+</div><!-- Footer end -->
 
 </body>
 </html>

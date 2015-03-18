@@ -6,5 +6,94 @@
             box-sizing: border-box;
 }
 body {
-  background: #e3e3e3;
+  font-family: 'Open Sans', sans-serif;
+  color: #010101;
 }
+h2 {
+  font-size: 30px;
+  font-weight: $semibold;
+  color: $black;
+}
+h3 {
+  font-size: 30px;
+  font-weight: $bold;
+  color: $white;
+}
+h5 {
+  font-size: 18px;
+  font-weight: $bold;
+}
+
+
+p {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #0068bc;
+  border-bottom: 1px solid #0068bc;
+  @include transition (all, 0.3s, linear);
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+.container {
+  width: $container-width;
+  margin: auto;
+}
+.section {
+  min-width: $container-width;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 9px 15px;
+  outline: none;
+  cursor: pointer;
+  @include box-shadow (0 1px 2px rgba(0,0,0,.3));
+  @include border-radius (20px);
+  @include transition (all, 0.3s, linear);
+  &-white {
+    padding: 9px 25px;
+    color: #0068bc;
+    border: 1px solid #8cbbe1;
+    &:hover {
+      color: #ffab00;
+      border-color: #ffd98c;
+    }
+  }
+  &-orange {
+    font-size: 14px;
+    font-weight: $bold;
+    color: #8d6d00;
+    background: #0567b7;
+    background: -moz-linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
+    background: -webkit-linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
+    background: -o-linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
+    background: -ms-linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
+    background: linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
+    border: 1px solid #dba500;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3),
+                inset 0 0 0 1px #fff197;
+
+    &:hover {
+      background: -moz-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+      background: -webkit-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+      background: -o-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+      background: -ms-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+      background: linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+      box-shadow: 0 1px 2px rgba(0,0,0,.5),
+                  inset 0 0 0 1px #fff197;
+    }
+  }
+}
+
+
+
+
+
+
+
+
