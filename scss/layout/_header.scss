@@ -1,6 +1,6 @@
 .header {
     &-section {
-        background: url(../img/bg/header_bg.jpg);
+        background: url(../img/bg/header_visible_bg.jpg) repeat-x;
         border-bottom: 1px solid #b3bcc0;
         @include box-shadow (0 1px 0 #d7e1e6);
     }
