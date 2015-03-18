@@ -675,6 +675,7 @@ a:hover {
   padding: 14px 0 0 10px;
 }
 .offer-item-content {
+  height: 121px;
   background: #ffffff;
   text-align: left;
   padding: 20px 20px 30px 20px;
