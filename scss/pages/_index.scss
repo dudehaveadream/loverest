@@ -127,7 +127,7 @@
     .container {
         position: relative;
         .bx-viewport {
-            overflow: hidden;
+            overflow-x: hidden;
             margin: auto;
         }
         .bx-wrapper .bx-prev {
@@ -139,10 +139,14 @@
         .offer-item {
             margin-left: 1px;
         }
+        .slide {
+            height: 360px;
+        }
     }
 }
 .offer-item {
     width: 320px;
+    height: 340px;
     @include border-radius (0 0 20px 20px);
     .image-holder {
         height: 218px;
@@ -167,7 +171,7 @@
     &-content {
         background: $white;
         text-align: left;
-        padding: 20px 20px 50px 20px;
+        padding: 20px 20px 30px 20px;
         position: relative;
         border-left: 1px solid #c0c5c6;
         border-right: 1px solid #c0c5c6;
@@ -187,7 +191,7 @@
             padding: 9 30px;
             position: absolute;
             left: 50%;
-            bottom: 5px;
+            bottom: -17px;
             margin-left: -60px;
             text-transform: uppercase;
             @include box-shadow (0 0 0 3px #e7e7e7);

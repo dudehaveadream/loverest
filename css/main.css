@@ -121,6 +121,7 @@ a:hover {
 }
 
 .btn {
+  display: inline-block;
   font-size: 14px;
   padding: 9px 15px;
   outline: none;
@@ -168,6 +169,52 @@ a:hover {
   background: linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 0 1px #fff197;
 }
+.btn-blue {
+  display: table;
+  height: 34px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #303030;
+  border-bottom: 1px solid #3e80b7;
+  background: #c1e7fb;
+  padding: 0 12px;
+  vertical-align: middle;
+  background: -moz-linear-gradient(bottom, #a2daf7 0%, #c1e7fb 50%, #dcf3ff 100%);
+  background: -webkit-linear-gradient(bottom, #a2daf7 0%, #c1e7fb 50%, #dcf3ff 100%);
+  background: -o-linear-gradient(bottom, #a2daf7 0%, #c1e7fb 50%, #dcf3ff 100%);
+  background: -ms-linear-gradient(bottom, #a2daf7 0%, #c1e7fb 50%, #dcf3ff 100%);
+  background: linear-gradient(bottom, #a2daf7 0%, #c1e7fb 50%, #dcf3ff 100%);
+}
+.btn-blue .left-image {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 12px;
+  border-right: 1px solid #56b7e4;
+}
+.btn-blue .right-image {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 12px;
+}
+.btn-blue .main-text {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 12px;
+}
+.btn-blue.single .main-text {
+  padding-left: 0;
+}
+.btn-blue:hover {
+  border-color: #3e80b7;
+  background: -moz-linear-gradient(bottom, #86cbee 0%, #a8daf4 50%, #cceafa 100%);
+  background: -webkit-linear-gradient(bottom, #86cbee 0%, #a8daf4 50%, #cceafa 100%);
+  background: -o-linear-gradient(bottom, #86cbee 0%, #a8daf4 50%, #cceafa 100%);
+  background: -ms-linear-gradient(bottom, #86cbee 0%, #a8daf4 50%, #cceafa 100%);
+  background: linear-gradient(bottom, #86cbee 0%, #a8daf4 50%, #cceafa 100%);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
 
 /* Layout related stylesheets* */
 .header-section {
@@ -182,6 +229,14 @@ a:hover {
 }
 .header-visible .logo {
   border: none;
+}
+.header-visible .location {
+  display: inline-block;
+  margin-left: 25px;
+}
+.header-visible .login-btn {
+  float: right;
+  padding-top: 8px;
 }
 
 .search-section {
@@ -383,6 +438,10 @@ a:hover {
 .footer-center .left-item ul li a:hover {
   border-color: #d0e1f3;
 }
+.footer-center .left-item .btn-blue {
+  width: 160px;
+  margin-top: 10px;
+}
 .footer-center .right {
   width: 250px;
   float: right;
@@ -568,7 +627,7 @@ a:hover {
   position: relative;
 }
 .offers-section .container .bx-viewport {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: auto;
 }
 .offers-section .container .bx-wrapper .bx-prev {
@@ -580,9 +639,13 @@ a:hover {
 .offers-section .container .offer-item {
   margin-left: 1px;
 }
+.offers-section .container .slide {
+  height: 360px;
+}
 
 .offer-item {
   width: 320px;
+  height: 340px;
   -webkit-border-radius: 0 0 20px 20px;
   -moz-border-radius: 0 0 20px 20px;
   -ms-border-radius: 0 0 20px 20px;
@@ -614,7 +677,7 @@ a:hover {
 .offer-item-content {
   background: #ffffff;
   text-align: left;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 20px 30px 20px;
   position: relative;
   border-left: 1px solid #c0c5c6;
   border-right: 1px solid #c0c5c6;
@@ -638,7 +701,7 @@ a:hover {
   padding: 9 30px;
   position: absolute;
   left: 50%;
-  bottom: 5px;
+  bottom: -17px;
   margin-left: -60px;
   text-transform: uppercase;
   -webkit-box-shadow: 0 0 0 3px #e7e7e7;
