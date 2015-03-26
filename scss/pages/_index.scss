@@ -100,7 +100,7 @@
                     margin-left: -35px;
                 }
             }
-            &:hover {
+            &:hover, &.active {
                 img.stat {
                     opacity: 0;
                 }
@@ -115,6 +115,38 @@
         }
     }
 }
+.categories-holder {
+    position: relative;
+    padding: 0 0 15px;
+    .categories-btn {
+        text-align: center;
+        .categoriesToggle {
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 30px;
+            font-weight: $bold;
+            color: #0068bc;
+            cursor: pointer;
+            border-bottom: 1px dashed #b2b2b2;
+            padding-bottom: 8px;
+            img {
+                margin-left: 10px;
+            }
+        }
+    }
+    .categories-section {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background: $white;
+        z-index: 100;
+        border-bottom: 1px solid #c5c5c5;
+        @include box-shadow (0 1px 0 rgba(0,0,0,.1));
+    }
+}
+
 
 .offers-section {
     padding: 45px 0 30px;
@@ -183,15 +215,15 @@
         h5 {
             font-size: 18px;
             font-weight: $semibold;
-            margin-bottom: 10px;
             padding-right: 40px;
+            margin-bottom: 5px;
+            line-height: 1.2;
         }
         p {
             line-height: 1.5;
             padding-right: 20px;
         }
-        .btn-orange {
-            padding: 9 30px;
+        .btn-orange-holder {
             position: absolute;
             left: 50%;
             bottom: -17px;
@@ -199,8 +231,11 @@
             text-align: center;
             margin-left: -75px;
             text-transform: uppercase;
-            @include box-shadow (0 0 0 3px #e7e7e7);
             opacity: 0;
+            @include transition (all, 0.4s, linear);
+            .btn {
+                width: 100%;
+            }
         }
         .likes {
             position: absolute;
@@ -231,7 +266,7 @@
         }
     }
     &:hover {
-        .btn-orange {
+        .btn-orange-holder {
             opacity: 1;
         }
         .likes {
@@ -372,7 +407,7 @@
                             }
                         }
                     }
-                    .btn-orange {
+                    .btn-orange-holder {
                         padding: 9 30px;
                         position: absolute;
                         right: 5px;
@@ -380,12 +415,15 @@
                         width: 150px;
                         text-align: center;
                         text-transform: uppercase;
-                        @include box-shadow (0 0 0 3px #e7e7e7);
                         opacity: 0;
+                        @include transition (all, 0.4s, linear);
+                        .btn {
+                            width: 100%;
+                        }
                     }
                 }
                 &:hover {
-                    .btn-orange {
+                    .btn-orange-holder {
                         opacity: 1;
                     }
                     .likes {

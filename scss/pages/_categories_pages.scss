@@ -1,0 +1,127 @@
+.breadcrumbs-section {
+  padding: 15px 0;
+  .breadcrumbs {
+    text-align: center;
+    li {
+      display: inline-block;
+      a {
+        vertical-align: middle;
+      }
+      &:last-child {
+        a {
+          font-size: 18px;
+          font-weight: $bold;
+          font-style: italic;
+          color: #303030;
+          border-color: transparent;
+          cursor: default;
+        }
+      }
+      &:after {
+        content: '>';
+        font-size: 18px;
+        color: #303030;
+        margin-left: 5px;
+        margin-top: 1px;
+        float: right;
+      }
+      &:last-child:after {
+        content: none;
+      }
+    }
+  }
+}
+
+.categories-list {
+    padding-bottom: 35px;
+    padding-top: 15px;
+    .more-holder {
+      text-align: center;
+      position: relative;
+      .more {
+        padding: 15px 50px 15px 25px;
+        display: inline-block;
+        border: none;
+        font-size: 16px;
+        font-weight: $semibold;
+        text-transform: uppercase;
+        color: $black;
+        background: #f4f4f4;
+        border: 1px solid #bdbdbd;
+        position: relative;
+        @include border-radius (25px);
+        @include box-shadow (0 1px 5px rgba(0,0,0,.2));
+        &:hover {
+          opacity: .8;
+        }
+        img {
+          float: right;
+          position: absolute;
+          top: 6px;
+          right: 6px;
+        }
+      }
+        #gotop {
+          width: 53px;
+          height: 53px;
+          position: absolute;
+          top: -5px;
+          right: -65px;
+          border: none;
+          background: url(../img/icons/gotop.png) no-repeat;
+        }
+    }
+    &-inner {
+        @include clearfix;
+        .offer-item {
+            height: 360px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            &-content {
+                height: 141px;
+                hr {
+                    position: absolute;
+                    left: 20px;
+                    bottom: 38px;
+                    height: 0;
+                    border: none;
+                    border-top: 1px solid #d2d2d2;
+                    width: 278px;
+                }
+                .btn-orange-holder {
+                    width: 130px;
+                    left: auto;
+                    right: 10px;
+                    bottom: 0;
+                    opacity: 1;
+                }
+                .likes {
+                    opacity: 1;
+                    top: auto;
+                    right: auto;
+                    left: 20px;
+                    bottom: 10px;
+                }
+                p {
+                  .date {
+                    color: #ff0a00;
+                    .hour {
+                      position: relative;
+                      padding-right: 10px;
+                      .minutes {
+                        position: absolute;
+                        right: 0;
+                        top: 1px;
+                        font-size: 9px;
+                      }
+                    }
+                  }
+                }
+            }
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+}
