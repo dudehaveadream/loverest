@@ -115,37 +115,6 @@
         }
     }
 }
-.categories-holder {
-    position: relative;
-    padding: 0 0 15px;
-    .categories-btn {
-        text-align: center;
-        .categoriesToggle {
-            background: none;
-            border: none;
-            outline: none;
-            font-size: 30px;
-            font-weight: $bold;
-            color: #0068bc;
-            cursor: pointer;
-            border-bottom: 1px dashed #b2b2b2;
-            padding-bottom: 8px;
-            img {
-                margin-left: 10px;
-            }
-        }
-    }
-    .categories-section {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%;
-        background: $white;
-        z-index: 100;
-        border-bottom: 1px solid #c5c5c5;
-        @include box-shadow (0 1px 0 rgba(0,0,0,.1));
-    }
-}
 
 
 .offers-section {

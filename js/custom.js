@@ -7,6 +7,7 @@ $(document).ready(function(){
 
     $('.categories-holder .categories-section').hide();
     $('.categories-holder .categoriesToggle').click(function(){
+        $(this).toggleClass("open");
         $('.categories-holder .categories-section').slideToggle();
     });
 

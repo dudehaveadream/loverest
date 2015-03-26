@@ -754,40 +754,6 @@ a:hover {
   border-color: #ffd98c;
 }
 
-.categories-holder {
-  position: relative;
-  padding: 0 0 15px;
-}
-.categories-holder .categories-btn {
-  text-align: center;
-}
-.categories-holder .categories-btn .categoriesToggle {
-  background: none;
-  border: none;
-  outline: none;
-  font-size: 30px;
-  font-weight: 700;
-  color: #0068bc;
-  cursor: pointer;
-  border-bottom: 1px dashed #b2b2b2;
-  padding-bottom: 8px;
-}
-.categories-holder .categories-btn .categoriesToggle img {
-  margin-left: 10px;
-}
-.categories-holder .categories-section {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  background: #ffffff;
-  z-index: 100;
-  border-bottom: 1px solid #c5c5c5;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
 .offers-section {
   padding: 45px 0 30px;
   text-align: center;
@@ -1176,6 +1142,52 @@ a:hover {
 }
 .breadcrumbs-section .breadcrumbs li:last-child:after {
   content: none;
+}
+
+.categories-holder {
+  position: relative;
+  padding: 0 0 15px;
+}
+.categories-holder .categories-btn {
+  text-align: center;
+}
+.categories-holder .categories-btn .categoriesToggle {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0068bc;
+  cursor: pointer;
+  border-bottom: 1px dashed #b2b2b2;
+  padding-bottom: 8px;
+}
+.categories-holder .categories-btn .categoriesToggle img {
+  margin-left: 10px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.categories-holder .categories-btn .categoriesToggle.open img {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.categories-holder .categories-section {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: #ffffff;
+  z-index: 100;
+  border-bottom: 1px solid #c5c5c5;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .categories-list {
