@@ -41,6 +41,9 @@
                 }
                 .share {
                     margin-top: 20px;
+                    .big-like {
+                        float: right;
+                    }
                 }
             }
         }
@@ -141,10 +144,24 @@
         }
     }
     .btn-container {
-        padding: 10px 0;
+        padding: 10px 0 5px;
         border-bottom: 1px solid #d2d2d2;
         .btn-sky {
             font-weight: $semibold;
+            padding: 0 15px;
+            display: table;
+            height: 28px;
+            .left-image {
+                border-right: 1px solid #009bcf;
+                display: table-cell;
+                vertical-align: middle;
+                padding-right: 8px;
+            }
+            .main-text {
+                display: table-cell;
+                vertical-align: middle;
+                padding-left: 8px;
+            }
         }
     }
     .comments-inner {

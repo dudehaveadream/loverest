@@ -1,0 +1,115 @@
+.main-popup {
+  position: relative;
+  background: $white;
+  padding: 15px 35px 30px;
+  width:auto;
+  max-width: 710px;
+  margin: 0 auto;
+  text-align: center;
+  @include border-radius (20px);
+  @include box-shadow (0 0 10px 1px rgba(0,0,0,.7));
+  h4 {
+    margin-bottom: 10px;
+  }
+  .comment-social {
+    h5 {
+      font-size: 14px;
+      font-weight: $regular;
+    }
+    p {
+      font-size: 12px;
+    }
+    .social {
+      margin: 10px 0;
+      a {
+        border: none;
+        margin: 0 22px;
+      }
+    }
+    form {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #d2d2d2;
+      h5 {
+        text-align: left;
+        font-size: 18px;
+        font-weight: $bold;
+        .stars {
+          display: inline-block;
+          margin-left: 15px;
+        }
+      }
+      textarea {
+        width: 100%;
+        height: 122px;
+        margin: 15px 0;
+        padding: 10px 15px;
+        background: #f7fafb;
+        border: 1px solid #e0e0e0;
+        outline: none;
+        resize: none;
+        @include border-radius (20px);
+      }
+    .btn-container {
+      text-align: right;
+        .btn-sky {
+            font-weight: $semibold;
+            padding: 0 15px;
+            display: table;
+            height: 28px;
+            .left-image {
+                border-right: 1px solid #009bcf;
+                display: table-cell;
+                vertical-align: middle;
+                padding-right: 8px;
+            }
+            .main-text {
+                display: table-cell;
+                vertical-align: middle;
+                padding-left: 8px;
+            }
+        }
+      }
+    }
+  }
+}
+
+.mfp-zoom-in {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+      transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.mfp-bg {
+      opacity: 0.6;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}

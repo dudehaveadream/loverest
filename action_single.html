@@ -9,15 +9,17 @@
     <!-- Styles -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,700,600,800,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/bxslider.css" />
-    <link rel="stylesheet" type="text/css" href="css/mCustomScrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/scrollbar.css" />
     <link rel="stylesheet" type="text/css" href="css/raty.css" />
+    <link rel="stylesheet" type="text/css" href="css/magnificpopup.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar.min.js"></script>
     <script src="js/raty.js" type="text/javascript"></script>
+    <script src="js/magnificpopup.min.js" type="text/javascript"></script>
     <script src="js/custom.js" type="text/javascript"></script>
     <script>
     $(document).ready(function(){
@@ -39,6 +41,32 @@
                     preset: 'islands#dotIcon',
                     iconColor: '#0069c9'
                 }))
+        });
+
+        $('.modal-holder').magnificPopup({
+          delegate: 'a',
+          removalDelay: 500, //delay removal by X to allow out-animation
+          callbacks: {
+            beforeOpen: function() {
+               this.st.mainClass = this.st.el.attr('data-effect');
+            }
+          },
+          midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+        });
+
+        // Hinge effect popup
+        $('a.hinge').magnificPopup({
+          mainClass: 'mfp-with-fade',
+          removalDelay: 1000, //delay removal by X to allow out-animation
+          callbacks: {
+            beforeClose: function() {
+                this.content.addClass('hinge');
+            },
+            close: function() {
+                this.content.removeClass('hinge');
+            }
+          },
+          midClick: true
         });
 
         $('.stars').raty({
@@ -149,15 +177,18 @@
                     <p><span class="date">31.12.2014, <span class="hour">22<span class="minutes">00</span></span></span> Добро пожаловать в сеть ресторанов Хмельная Пражечка, где Вы можете провести приятный вечерок, сэкономив 40% личного бюджета! Фирменное пиво, особые и полюбившиеся закуски, огромные порции салатов и горячие блюда – приходите большой компанией, веселитесь, отдыхайте в тепле и уюте! Вкуснейшие салаты, море закусок под пиво, горячие блюда из мяса, птицы или рыбы, а также традиционное чешское пиво в сети ресторанов Хмельная Пражечка! Скидка 40% на все меню и бар.</p>
                     <p>Фирменное пиво, особые и полюбившиеся закуски, огромные порции салатов и горячие блюда – приходите компанией, веселитесь, отдыхайте в тепле и уюте!</p>
                     <div class="image-holder"><img src="img/action_single.jpg" alt=""></div>
-                    <div class="share"><img src="img/share.jpg" alt=""></div>
+                    <div class="share">
+                        <img src="img/share.jpg" alt="">
+                        <div class="big-like"><span class="like"></span><span class="count">1025</span></div>
+                    </div>
                 </div>
                 <div class="comments-holder">
                     <div class="head">
                         <h4>Комментарии</h4>
                     </div>
                     <div class="btn-container">
-                        <div class="btn-orange-holder">
-                            <a href="#" class="btn btn-sky">Добавить комментарий</a>
+                        <div class="btn-orange-holder modal-holder">
+                            <a href="#comment-popup" class="btn btn-sky"  data-effect="mfp-zoom-in"><span class="left-image"><img src="img/icons/plus_small.png" alt=""></span><span class="main-text">Добавить комментарий</span></a>
                         </div>
                     </div>
                     <div class="comments-inner">
@@ -392,6 +423,33 @@
         </div>
     </div>
 </div><!-- Footer end -->
+
+<!-- Modal end -->
+<div id="comment-popup" class="main-popup mfp-with-anim mfp-hide">
+    <h4>Ваш отзыв</h4>
+    <div class="comment-social">
+        <h5>Чтобы оставить отзыв, войдите с помощью вашей любимой социальной сети: </h5>
+        <div class="social">
+            <a href="#"><img src="img/footer/vk.png" alt=""></a>
+            <a href="#"><img src="img/footer/fb.png" alt=""></a>
+            <a href="#"><img src="img/footer/mail.png" alt=""></a>
+            <a href="#"><img src="img/footer/odn.png" alt=""></a>
+            <a href="#"><img src="img/footer/tw.png" alt=""></a>
+            <a href="#"><img src="img/footer/insta.png" alt=""></a>
+        </div>
+        <p>Это безопасно. Авторизация происходит на сайте соцсети.</p>
+        <p>Мы не видим и не сохраняем ваш пароль.</p>
+        <form action="">
+            <h5>Поставьте оценку заведению:<div class="stars" data-score="0"></div></h5>
+            <textarea placeholder="Текст вашего отзыва..."></textarea>
+            <div class="btn-container">
+                <div class="btn-orange-holder">
+                    <a href="#" class="btn btn-sky"><span class="left-image"><img src="img/icons/plus_small.png" alt=""></span><span class="main-text">Добавить комментарий</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
