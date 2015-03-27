@@ -78,7 +78,7 @@
 
 .mCSB_scrollTools .mCSB_draggerRail{
     width:24px;
-    background: url(../img/drag-bg.png) repeat-y 0 0;
+    background: url(../img/icons/drag-bg.png) repeat-y 0 0;
     height:100%;
 }
 
@@ -95,7 +95,7 @@
     width:16px;
     height:53px;
     text-align:center;
-    background:url(../img/drag.png) transparent no-repeat;
+    background:url(../img/icons/drag.png) transparent no-repeat;
     display:inline-block;
 }
 
@@ -339,11 +339,11 @@
 }
 
 .mCSB_scrollTools .mCSB_buttonUp{
-    background: url(../img/drag-up.png);
+    background: url(../img/icons/drag-up.png);
 }
 
 .mCSB_scrollTools .mCSB_buttonDown{
-    background: url(../img/drag-down.png);
+    background: url(../img/icons/drag-down.png);
 }
 
 .mCSB_scrollTools .mCSB_buttonLeft,

@@ -116,15 +116,13 @@ a {
     font-weight: $bold;
     color: #8d6d00;
     background: #a45500;
-      background: -moz-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
-      background: -webkit-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
-      background: -o-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
-      background: -ms-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
-      background: linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
-
+    background: -moz-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+    background: -webkit-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+    background: -o-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+    background: -ms-linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
+    background: linear-gradient(bottom, #ffc702 0%, #ffd82a 50%, #ffe850 100%);
     border: 1px solid #dba500;
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
-
     &:hover {
       background: -moz-linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
       background: -webkit-linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
@@ -132,6 +130,54 @@ a {
       background: -ms-linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
       background: linear-gradient(bottom, #ffe850 0%, #ffd82a 50%, #ffc702 100%);
       border: 1px solid #dba500;
+    }
+  }
+  &-sky {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: $bold;
+    color: #003e60;
+    background: #00baf2;
+    background: -moz-linear-gradient(bottom, #00a3e7 0%, #00baf2 50%, #00d3fe 100%);
+    background: -webkit-linear-gradient(bottom, #00a3e7 0%, #00baf2 50%, #00d3fe 100%);
+    background: -o-linear-gradient(bottom, #00a3e7 0%, #00baf2 50%, #00d3fe 100%);
+    background: -ms-linear-gradient(bottom, #00a3e7 0%, #00baf2 50%, #00d3fe 100%);
+    background: linear-gradient(bottom, #00a3e7 0%, #00baf2 50%, #00d3fe 100%);
+    border: 1px solid #058fd2;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
+    &:hover {
+      background: #00baf2;
+      background: -moz-linear-gradient(bottom, #00d3fe 0%, #00baf2 50%, #00a3e7 100%);
+      background: -webkit-linear-gradient(bottom, #00d3fe 0%, #00baf2 50%, #00a3e7 100%);
+      background: -o-linear-gradient(bottom, #00d3fe 0%, #00baf2 50%, #00a3e7 100%);
+      background: -ms-linear-gradient(bottom, #00d3fe 0%, #00baf2 50%, #00a3e7 100%);
+      background: linear-gradient(bottom, #00d3fe 0%, #00baf2 50%, #00a3e7 100%);
+      border: 1px solid #058fd2;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
+    }
+  }
+  &-yellow {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: $bold;
+    color: #a45600;
+    background: #ffd727;
+    background: -moz-linear-gradient(bottom, #ffc702 0%, #ffd727 50%, #ffe851 100%);
+    background: -webkit-linear-gradient(bottom, #ffc702 0%, #ffd727 50%, #ffe851 100%);
+    background: -o-linear-gradient(bottom, #ffc702 0%, #ffd727 50%, #ffe851 100%);
+    background: -ms-linear-gradient(bottom, #ffc702 0%, #ffd727 50%, #ffe851 100%);
+    background: linear-gradient(bottom, #ffc702 0%, #ffd727 50%, #ffe851 100%);
+    border: 1px solid #eab507;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
+    &:hover {
+      background: #ffd727;
+      background: -moz-linear-gradient(bottom, #ffe851 0%, #ffd727 50%, #ffc702 100%);
+      background: -webkit-linear-gradient(bottom, #ffe851 0%, #ffd727 50%, #ffc702 100%);
+      background: -o-linear-gradient(bottom, #ffe851 0%, #ffd727 50%, #ffc702 100%);
+      background: -ms-linear-gradient(bottom, #ffe851 0%, #ffd727 50%, #ffc702 100%);
+      background: linear-gradient(bottom, #ffe851 0%, #ffd727 50%, #ffc702 100%);
+      border: 1px solid #eab507;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
     }
   }
 }
@@ -144,7 +190,7 @@ a {
   background: -ms-linear-gradient(bottom, #fefefe 0%, #e7e7e7 50%, #cccccc 100%);
   background: linear-gradient(bottom, #fefefe 0%, #e7e7e7 50%, #cccccc 100%);
   @include border-radius (20px);
-  .btn-orange {
+  .btn {
     width: 100%;
   }
 }
