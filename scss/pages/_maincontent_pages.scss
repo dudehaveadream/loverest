@@ -5,6 +5,7 @@
         float: left;
         width: 672px;
         &-inner {
+            margin-bottom: 55px;
             padding: 15px 35px;
             border: 1px solid #e0e0e0;
             @include border-radius (20px);
@@ -45,6 +46,143 @@
                         float: right;
                     }
                 }
+            }
+        }
+        .developments-single {
+            position: relative;
+            padding: 0;
+            &-slider {
+                position: relative;
+                .bx-wrapper .bx-controls-direction a {
+                    height: 42px;
+                    width: 42px;
+                }
+                .bx-wrapper .bx-prev {
+                    left: 10px;
+                    background: url(../img/slider/gray_left.png);
+                }
+                .bx-wrapper .bx-next {
+                    right: 10px;
+                    background: url(../img/slider/gray_right.png);
+                }
+                .bx-wrapper .bx-pager {
+                    left: auto;
+                    right: 25px;
+                    bottom: 15px;
+                    width: auto;
+                }
+                .bx-wrapper .bx-pager.bx-default-pager a {
+                    background: #ffffff;
+                }
+                .bx-wrapper .bx-pager.bx-default-pager a:hover,
+                .bx-wrapper .bx-pager.bx-default-pager a.active {
+                    background: #0f7cce;
+                }
+                img {
+                    @include border-radius (20px);
+                    width: 100%;
+                    height: 390px;
+                }
+            }
+            &-inner {
+                padding: 15px 35px;
+                h4 {
+                    font-weight: $semibold;
+                    margin-bottom: 15px;
+                }
+                .rating {
+                    margin-bottom: 15px;
+                    @include clearfix;
+                    .stars {
+                        float: left;
+                    }
+                    .big-like {
+                        float: right;
+                    }
+                }
+            }
+        }
+        .developments-tabs {
+            position: relative;
+            @include border-radius (0 20px 20px 20px);
+            .tabs {
+                border-top: 1px solid #c5c5c5;
+                border-left: 1px solid #c5c5c5;
+                border-right: 1px solid #c5c5c5;
+                position: absolute;
+                left: -1px;
+                bottom: 100%;
+                overflow: hidden;
+                @include clearfix;
+                @include border-radius (20px 20px 0 0);
+                li {
+                    height: 36px;
+                    padding-top: 5px;
+                    background: #dfe5e5;
+                    cursor: pointer;
+                    float: left;
+                    width: 140px;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: &bold;
+                    text-transform: uppercase;
+                    color: #666666;
+                    border-bottom: 1px solid #c5c5c5;
+                    border-right: 1px solid #c5c5c5;
+                    .left-image {
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        vertical-align: middle;
+                        margin-right: 5px;
+                    }
+                    .text {
+                        vertical-align: middle;
+                    }
+                    &:last-child {
+                        border-right: none;
+                    }
+                    &.current {
+                        background: $white;
+                        color: #0068bc;
+                        border-bottom-color: transparent;
+                    }
+                    &.descrip {
+                        .left-image {
+                            background: url(../img/icons/descrip.png) no-repeat;
+                        }
+                        &.current {
+                            .left-image {
+                                background-position: left bottom;
+                            }
+                        }
+                    }
+                    &.reviews {
+                        .left-image {
+                            background: url(../img/icons/reviews.png) no-repeat;
+                        }
+                        &.current {
+                            .left-image {
+                                background-position: left bottom;
+                            }
+                        }
+                    }
+                }
+            }
+            .box {
+                display: none;
+                .description {
+                    h5 {
+                        font-weight: $semibold;
+                        margin: 7px 0;
+                    }
+                    p {
+                        line-height: 1.3;
+                    }
+                }
+            }
+            .box.visible {
+                display: block;
             }
         }
     }
