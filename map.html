@@ -14,11 +14,24 @@
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/scrollbar.min.js"></script>
     <script src="js/raty.js" type="text/javascript"></script>
     <script src="js/custom.js" type="text/javascript"></script>
     <script>
     $(document).ready(function(){
+
+        ymaps.ready(function () {
+            // Создание экземпляра карты и его привязка к созданному контейнеру.
+            var myMap = new ymaps.Map('big-map', {
+                    center: [55.7769,37.7504],
+                    zoom: 11,
+                    behaviors: ['default', 'scrollZoom'],
+                    controls: []
+                });
+
+            myMap.behaviors.disable('scrollZoom');
+        });
 
         $('.stars').raty({
             score: function() {
@@ -31,18 +44,6 @@
             readOnly: true
         });
 
-        $('.filter-list .sublist').hide();
-        $('.filter-list > li > a').click(function(e){
-            $(this).next().slideToggle();
-            $(this).parent().toggleClass('open');
-            e.preventDefault();
-        });
-        $('.filter-list .sublist .filter-modal').hide();
-        $('.filter-list .sublist > li').click(function(e){
-            $(this).find('.filter-modal').fadeToggle();
-            $(this).toggleClass('active');
-            e.preventDefault();
-        });
 
     });
     </script>
@@ -136,14 +137,14 @@
 <div class="categories-holder">
     <div class="section categories-btn">
         <div class="container">
-            <button class="categoriesToggle">Салоны красоты<img src="img/icons/big_arrow_down.png" alt=""></button>
+            <button class="categoriesToggle">Рестораны, караоке<img src="img/icons/big_arrow_down.png" alt=""></button>
         </div>
     </div>
     <div class="section categories-section">
         <div class="container">
             <div class="categories-inner">
                 <div class="categories-item">
-                    <a href="#" class="categories-item-inner">
+                    <a href="#" class="categories-item-inner active">
                         <div class="image-holder image-holder-first">
                             <img src="img/categories/1.png" class="stat">
                             <img src="img/categories/1h.png" class="hov">
@@ -161,7 +162,7 @@
                     </a>
                 </div>
                 <div class="categories-item">
-                    <a href="#" class="categories-item-inner active">
+                    <a href="#" class="categories-item-inner">
                         <div class="image-holder image-holder-third">
                             <img src="img/categories/3.png" class="stat">
                             <img src="img/categories/3h.png" class="hov">
@@ -219,215 +220,20 @@
     </div>
 </div><!-- Categories end -->
 
-<div class="section page-nav salons-page">
+<div class="section page-nav">
     <div class="container">
         <div class="page-nav-inner">
-            <div class="page-nav-item salons-page-item">
-                <a href="#" class="salons active"><span class="left-image"></span><span class="text">сАЛОНЫ</span></a>
-                <a href="#" class="masters"><span class="left-image"></span><span class="text">МАСТЕРА</span></a>
-            </div>
             <div class="page-nav-item">
-                <a href="#" class="list active"><span class="left-image"></span><span class="text">сПИСОК</span></a>
-                <a href="map.html" class="map"><span class="left-image"></span><span class="text">КАРТА</span></a>
+                <a href="salons.html" class="list"><span class="left-image"></span><span class="text">сПИСОК</span></a>
+                <a href="#" class="map active"><span class="left-image"></span><span class="text">КАРТА</span></a>
             </div>
         </div>
     </div>
-</div>
+</div><!-- Page nav end -->
 
-<div class="section">
-    <div class="container main-content">
-        <div class="sidebar-left">
-            <div class="search-container">
-                <div class="search-holder">
-                    <input type="text" class="search" placeholder="Поиск по названию">
-                    <input type="button">
-                </div>
-            </div>
-            <ul class="filter-list">
-                <li><a href="#">Волосы<img src="img/icons/blue_arrow_down.png" alt=""></a></li>
-                <li><a href="#">Ногти<img src="img/icons/blue_arrow_down.png" alt=""></a></li>
-                <li>
-                    <a href="#">лицо и тело<img src="img/icons/blue_arrow_down.png" alt=""></a>
-                    <ul class="sublist">
-                        <li><a href="#">Стижки и укладки <span>(123)</span></a></li>
-                        <li><a href="#">Окрашивание <span>(102)</span></a></li>
-                        <li><a href="#">Мужские стрижки и бритье <span>(36)</span></a></li>
-                        <li><a href="#">Маникюр <span>(123)</span></a></li>
-                        <li><a href="#">Моделирование <span>(53)</span></a></li>
-                        <li><a href="#">Педикюр <span>(53)</span></a></li>
-                        <li><a href="#">Мужской маникюр и педикюр <span>(123)</span></a></li>
-                        <li><a href="#">Завивка волос <span>(8)</span></a></li>
-                        <li>
-                            <a href="#">Макияж <span>(123)</span></a>
-                            <div class="filter-modal">
-                                <div class="left-modal">
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                </div>
-                                <div class="right-modal">
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Стрижка женская <span>(181)</span> 200 — 3 650т.</a></div>
-                                    <div class="item"><a href="#">Укладка волос <span>(160)</span> 200 — 2 450т.</a></div>
-                                    <div class="item"><a href="#">Свадебная прическа <span>(181)</span> 200 — 3 650т.</a></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="content-right">
-            <div class="categories-list-inner">
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel1.jpg" alt="">
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Шанталь</h5>
-                        <p>Краткое описание салона в несколько строк для наглядности!</p>
-                        <div class="stars" data-score="4.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel2.jpg" alt="">
-                        <div class="discount">- 50%</div>
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Делис</h5>
-                        <p>Несколько акционных строк в подарок!</p>
-                        <div class="stars" data-score="2.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel1.jpg" alt="">
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Шанталь</h5>
-                        <p>Краткое описание салона в несколько строк для наглядности!</p>
-                        <div class="stars" data-score="4.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel2.jpg" alt="">
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Делис</h5>
-                        <p>Несколько акционных строк в подарок!</p>
-                        <div class="stars" data-score="2.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel1.jpg" alt="">
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Шанталь</h5>
-                        <p>Краткое описание салона в несколько строк для наглядности!</p>
-                        <div class="stars" data-score="4.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel2.jpg" alt="">
-                        <div class="discount">- 50%</div>
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Делис</h5>
-                        <p>Несколько акционных строк в подарок!</p>
-                        <div class="stars" data-score="2.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel1.jpg" alt="">
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Шанталь</h5>
-                        <p>Краткое описание салона в несколько строк для наглядности!</p>
-                        <div class="stars" data-score="4.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <div class="image-holder">
-                        <img src="img/slider/carousel2.jpg" alt="">
-                    </div>
-                    <div class="offer-item-content">
-                        <h5>Делис</h5>
-                        <p>Несколько акционных строк в подарок!</p>
-                        <div class="stars" data-score="2.5"></div>
-                        <hr>
-                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
-                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="more-holder">
-                <a href="#" class="more">Показать еще заведения<img src="img/icons/more_arrow.png" alt=""></a>
-                <a href="#" id="gotop"></a>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="map-section">
+    <div id="big-map"></div>
+</div><!-- Map end -->
 
 <div class="section footer-section">
     <div class="footer-inner">
