@@ -1,0 +1,297 @@
+.page-nav {
+    margin: 15px 0 20px;
+    text-align: center;
+    overflow: hidden;
+    &-inner {
+        display: inline-block;
+        padding: 10px;
+        background: #e7f3f8;
+        position: relative;
+        @include border-radius (25px);
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            background: #e7f3f8;
+            width: 1500px;
+            margin-top: -2px;
+            height: 4px;
+        }
+        &:before {
+            right: 100%;
+        }
+        &:after {
+            left: 100%;
+        }
+        a {
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 12px;
+            color: #000000;
+            text-transform: uppercase;
+            background: #ffffff;
+            border: 1px solid #abb4b8;
+            vertical-align: middle;
+            .left-image {
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                margin-right: 4px;
+                vertical-align: middle;
+            }
+            .text {
+                vertical-align: middle;
+            }
+            &:first-child {
+                @include border-radius (20px 0 0 20px);
+            }
+            &:last-child {
+                margin-left: -6px;
+                @include border-radius (0 20px 20px 0);
+            }
+            &.active {
+                background: #787678;
+                color: #ffffff;
+                border-color: #e7f3f8;
+                border-bottom-color: #ffffff;
+                @include box-shadow (inset 1px 0 4px rgba(0,0,0,.9));
+                .left-image {
+                    background-position: left bottom;
+                }
+            }
+            &.salons {
+                .left-image {
+                    background-image: url(../img/icons/salons.png);
+                }
+            }
+            &.masters {
+                .left-image {
+                    width: 14px;
+                    background-image: url(../img/icons/masters.png);
+                }
+            }
+            &.list {
+                .left-image {
+                    background-image: url(../img/icons/list.png);
+                }
+            }
+            &.map {
+                .left-image {
+                    width: 12px;
+                    background-image: url(../img/icons/map.png);
+                }
+            }
+        }
+    }
+    &-item {
+        display: inline-block;
+    }
+    &.salons-page {
+        text-align: right;
+        .salons-page-item {
+            margin-right: 15px;
+        }
+        .page-nav-inner {
+            margin-right: 151px;
+        }
+    }
+}
+
+.main-content {
+    position: relative;
+    .content-right {
+        width: 710px;
+        float: right;
+        .offer-item {
+            margin-right: 30px;
+            margin-bottom: 30px;
+            width: 340px;
+            .image-holder {
+                img {
+                    width: 100%;
+                }
+            }
+            hr {
+                width: 298px;
+            }
+            .stars {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        .offer-item:nth-child(2n+2) {
+            margin-right: 0;
+        }
+        .more-holder {
+          text-align: center;
+          position: relative;
+          .more {
+            padding: 15px 50px 15px 25px;
+            display: inline-block;
+            border: none;
+            font-size: 16px;
+            font-weight: $semibold;
+            text-transform: uppercase;
+            color: $black;
+            background: #f4f4f4;
+            border: 1px solid #bdbdbd;
+            position: relative;
+            @include border-radius (25px);
+            @include box-shadow (0 1px 5px rgba(0,0,0,.2));
+            &:hover {
+              opacity: .8;
+            }
+            img {
+              float: right;
+              position: absolute;
+              top: 6px;
+              right: 6px;
+            }
+          }
+            #gotop {
+              width: 53px;
+              height: 53px;
+              position: absolute;
+              top: -5px;
+              right: -65px;
+              border: none;
+              background: url(../img/icons/gotop.png) no-repeat;
+            }
+        }
+    }
+    .sidebar-left {
+        width: 255px;
+        float: left;
+        border: 1px solid #d2d2d2;
+        @include border-radius (20px);
+        .search-container {
+            padding: 20px;
+            .search-holder {
+                padding: 5px;
+                border: 1px solid #d2d2d2;
+                position: relative;
+                @include border-radius (20px);
+                @include box-shadow (0 1px 4px rgba(0,0,0,.14));
+                .search {
+                    height: 30px;
+                    width: 100%;
+                    padding: 0 30px 0 15px;
+                    font-size: 13px;
+                    color: #666666;
+                    outline: none;
+                    border: 1px solid #d2d2d2;
+                    @include border-radius (20px);
+                    @include box-shadow (inset 0 1px 4px rgba(0,0,0,.14));
+                }
+                input[type="button"] {
+                    width: 16px;
+                    height: 16px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    background: url(../img/icons/search_gray.png) no-repeat;
+                    position: absolute;
+                    top: 12px;
+                    right: 15px;
+                }
+            }
+        }
+        .filter-list {
+            > li {
+                display: block;
+                padding: 12px 4px;
+                border-top: 1px solid #d2d2d2;
+                > a {
+                    margin-left: 14px;
+                    display: inline-block;
+                    font-size: 13px;
+                    font-weight: $semibold;
+                    color: #303030;
+                    text-transform: uppercase;
+                    border-bottom: 1px dashed #303030;
+                    padding-bottom: 3px;
+                    img {
+                        margin-left: 10px;
+                        @include transition (all, 0.2s, linear);
+                    }
+                }
+                &.open {
+                    > a {
+                        img {
+                            @include transform (rotate(180deg));
+                        }
+                    }
+                }
+                .sublist {
+                    padding: 5px 0;
+                    li {
+                        cursor: pointer;
+                        padding: 2px 14px 4px;
+                        border: 2px solid transparent;
+                        @include border-radius (15px 0 0 15px);
+                        a {
+                            display: inline-block;
+                            font-size: 12px;
+                            color: #303030;
+                            border-color: transparent;
+                            span {
+                                color: #0068bc;
+                                @include transition (all, 0.4s, linear);
+                            }
+                        }
+                        .filter-modal {
+                            z-index: 10;
+                            background: #ffffff;
+                            width: 710px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            padding: 15px 20px;
+                            border: 2px solid #408ecd;
+                            @include border-radius (20px);
+                            @include clearfix;
+                            a {
+                                margin: 7px 0;
+                                display: inline-block;
+                                &:hover {
+                                    color: #d89100;
+                                    border-color: #d89100;
+                                    span {
+                                        color: #d89100;
+                                    }
+                                }
+                            }
+                            .left-modal {
+                                width: 50%;
+                                float: left;
+                                border-right: 1px solid #d2d2d2;
+                                padding-right: 20px;
+                            }
+                            .right-modal {
+                                padding-left: 20px;
+                                width: 50%;
+                                float: right;
+                            }
+                        }
+                        &.active {
+                            border-color: #408ecd;
+                            &:after {
+                                content: '';
+                                width: 45px;
+                                height: 23px;
+                                background: #ffffff;
+                                border-top: 2px solid #408ecd;
+                                border-bottom: 2px solid #408ecd;
+                                float: right;
+                                margin-top: -4px;
+                                margin-right: -57px;
+                                z-index: 100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
