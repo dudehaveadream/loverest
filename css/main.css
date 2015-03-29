@@ -2268,7 +2268,309 @@ a:hover {
   z-index: 100;
 }
 
+.map-section {
+  padding-left: 510px;
+  height: 900px;
+  position: relative;
+}
+.map-section .filter-container {
+  width: 510px;
+  height: 900px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f7fafb;
+  overflow-x: hidden;
+  border-top: 1px solid #d5d5d5;
+}
+.map-section .filter-container .filter-top {
+  border-bottom: 1px solid #d5d5d5;
+  padding: 10px 20px 15px;
+}
+.map-section .filter-container .filter-top .search-container {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.map-section .filter-container .filter-top .search-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.map-section .filter-container .filter-top .left {
+  width: 50%;
+  float: left;
+  padding-top: 16px;
+}
+.map-section .filter-container .filter-top .left .search-holder {
+  padding: 5px;
+  border: 1px solid #d2d2d2;
+  position: relative;
+  background: #ffffff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+}
+.map-section .filter-container .filter-top .left .search-holder .search {
+  height: 30px;
+  width: 100%;
+  padding: 0 30px 0 15px;
+  font-size: 13px;
+  color: #666666;
+  outline: none;
+  border: 1px solid #d2d2d2;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.14);
+}
+.map-section .filter-container .filter-top .left .search-holder input[type="button"] {
+  width: 16px;
+  height: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url(../img/icons/search_gray.png) no-repeat;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+.map-section .filter-container .filter-top .right {
+  width: 50%;
+  float: right;
+  text-align: center;
+  position: relative;
+}
+.map-section .filter-container .filter-top .right p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #303030;
+  margin-bottom: 8px;
+}
+.map-section .filter-container .filter-top .right .question {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+}
+.map-section .filter-container .filter-top .right .check a {
+  padding: 8px 0;
+  display: inline-block;
+  width: 62px;
+  border: 1px solid #b7b9ba;
+  margin-right: -4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #303030;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+}
+.map-section .filter-container .filter-top .right .check a:first-child {
+  margin-left: -5px;
+  -webkit-border-radius: 15px 0 0 15px;
+  -moz-border-radius: 15px 0 0 15px;
+  -ms-border-radius: 15px 0 0 15px;
+  border-radius: 15px 0 0 15px;
+}
+.map-section .filter-container .filter-top .right .check a:last-child {
+  -webkit-border-radius: 0 15px 15px 0;
+  -moz-border-radius: 0 15px 15px 0;
+  -ms-border-radius: 0 15px 15px 0;
+  border-radius: 0 15px 15px 0;
+}
+.map-section .filter-container .filter-top .right .check a:hover {
+  border-color: #fcd24e;
+}
+.map-section .filter-container .filter-top .filter-categories {
+  padding-top: 15px;
+}
+.map-section .filter-container .filter-top .filter-categories:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.map-section .filter-container .filter-top .filter-categories-section {
+  width: 33%;
+  float: left;
+}
+.map-section .filter-container .filter-top .filter-categories-section p {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #303030;
+}
+.map-section .filter-container .filter-top .filter-categories-section .more-holder {
+  padding-left: 23px;
+}
+.map-section .filter-container .filter-top .filter-categories-section .more-holder a {
+  font-size: 12px;
+  color: #303030;
+  border-color: #8f9091;
+}
+.map-section .filter-container .filter-top .filter-categories-section .more-holder a:hover {
+  color: #0068bc;
+  border-color: transparent;
+}
+.map-section .filter-container .filter-top .filter-categories-section.first {
+  border-right: 1px solid #d5d5d5;
+}
+.map-section .filter-container .filter-top .filter-categories-section.second {
+  padding-left: 20px;
+  border-right: 1px solid #d5d5d5;
+}
+.map-section .filter-container .filter-top .filter-categories-section.third {
+  padding-left: 20px;
+}
+.map-section .filter-container .filter-content-item {
+  padding: 8px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #d5d5d5;
+}
+.map-section .filter-container .filter-content-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.map-section .filter-container .filter-content-item .image-holder {
+  width: 190px;
+  float: left;
+}
+.map-section .filter-container .filter-content-item .image-holder img {
+  width: 100%;
+  height: 208px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+.map-section .filter-container .filter-content-item .item-content {
+  width: 250px;
+  float: right;
+  margin-right: 12px;
+  min-height: 208px;
+  position: relative;
+  padding-bottom: 75px;
+  padding-top: 5px;
+}
+.map-section .filter-container .filter-content-item .item-content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.map-section .filter-container .filter-content-item .item-content p {
+  line-height: 1.4;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .stars-holder:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .stars-holder .stars {
+  float: right;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom hr {
+  border: none;
+  border-top: 1px solid #d2d2d2;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .likes {
+  float: left;
+  cursor: pointer;
+  margin-top: 10px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .likes .like {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(../img/icons/like.png);
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .likes .count {
+  font-size: 12px;
+  color: #666666;
+  float: right;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .likes:hover .like {
+  background: url(../img/icons/like_h.png);
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .likes:hover .count {
+  color: #0068bc;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .btn-orange-holder {
+  float: right;
+}
+.map-section .filter-container .filter-content-item .item-content-bottom .btn-orange-holder .btn-orange {
+  text-transform: uppercase;
+}
 .map-section #big-map {
   width: 100%;
-  height: 960px;
+  height: 900px;
+}
+
+.checkbox-holder {
+  margin: 4px 0;
+}
+
+.checkbox-holder input[type=checkbox] {
+  display: none;
+}
+
+.checkbox-holder input[type=checkbox] + label {
+  font-size: 12px;
+  color: #303030;
+  cursor: pointer;
+}
+
+.checkbox-holder input[type=checkbox] + label:hover {
+  color: #0068bc;
+}
+
+.checkbox-holder input[type=checkbox] + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 19px;
+  width: 18px;
+  margin: 0 5px 0 0;
+  background: url(../img/icons/checkbox.png) no-repeat;
+}
+
+.checkbox-holder input[type=checkbox] + label:hover::before {
+  background-position: 0 -19px;
+}
+
+.checkbox-holder input[type=checkbox]:checked + label::before {
+  background-position: 0 -38px;
+}
+
+.checkbox-holder input[type=checkbox]:checked + label {
+  color: #999999;
 }

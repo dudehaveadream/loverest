@@ -24,8 +24,8 @@
         ymaps.ready(function () {
             // Создание экземпляра карты и его привязка к созданному контейнеру.
             var myMap = new ymaps.Map('big-map', {
-                    center: [55.7769,37.7504],
-                    zoom: 11,
+                    center: [55.75399400, 37.62209300],
+                    zoom: 12,
                     behaviors: ['default', 'scrollZoom'],
                     controls: []
                 });
@@ -232,6 +232,187 @@
 </div><!-- Page nav end -->
 
 <div class="map-section">
+    <div class="filter-container">
+        <div class="filter-inner">
+            <div class="filter-top">
+                <div class="search-container">
+                    <div class="left">
+                        <div class="search-holder">
+                            <input type="text" class="search" placeholder="Поиск по названию">
+                            <input type="button">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>Средний чек</p>
+                        <a href="#" class="question"><img src="img/icons/question.png" alt=""></a>
+                        <div class="check">
+                            <a href="#">Т</a>
+                            <a href="#">ТТ</a>
+                            <a href="#">ТТТ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-categories">
+                    <div class="filter-categories-section first">
+                        <p>Тип заведения</p>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="coffeehouse">
+                            <label for="coffeehouse">Кофейни</label>
+                        </div>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="bars">
+                            <label for="bars">Бары</label>
+                        </div>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="pizza">
+                            <label for="pizza">Пиццерии</label>
+                        </div>
+                        <div class="more-holder">
+                            <a href="#" class="more">Еще →</a>
+                        </div>
+                    </div>
+                    <div class="filter-categories-section second">
+                        <p>Особенности</p>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="hookah">
+                            <label for="hookah">Кальян</label>
+                        </div>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="nosmoke">
+                            <label for="nosmoke">Некурящий зал</label>
+                        </div>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="wifi">
+                            <label for="wifi">Wi - fi</label>
+                        </div>
+                        <div class="more-holder">
+                            <a href="#" class="more">Еще →</a>
+                        </div>
+                    </div>
+                    <div class="filter-categories-section third">
+                        <p>Кухня</p>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="europian">
+                            <label for="europian">Европейская</label>
+                        </div>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="italian">
+                            <label for="italian">Итальянская</label>
+                        </div>
+                        <div class="checkbox-holder">
+                            <input type="checkbox" id="caucasian">
+                            <label for="caucasian">Кавказская</label>
+                        </div>
+                        <div class="more-holder">
+                            <a href="#" class="more">Еще →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-content">
+                <div class="filter-content-item">
+                    <div class="image-holder">
+                        <img src="img/filter1.jpg" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h5>The Kitchen</h5>
+                        <p>При заказе от 1500 руб. Паста карбонара в подарок!</p>
+                        <div class="item-content-bottom">
+                            <div class="stars-holder">
+                                <div class="stars" data-score="4.5"></div>
+                            </div>
+                            <hr>
+                            <div class="clearfix">
+                                <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                                <div class="btn-orange-holder"><a href="#" class="btn btn-orange">Забронировать</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-content-item">
+                    <div class="image-holder">
+                        <img src="img/filter2.jpg" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h5>0.75</h5>
+                        <p>При заказе от 0.75. Еще 0,5 в подарок!</p>
+                        <div class="item-content-bottom">
+                            <div class="stars-holder">
+                                <div class="stars" data-score="4.5"></div>
+                            </div>
+                            <hr>
+                            <div class="clearfix">
+                                <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                                <div class="btn-orange-holder"><a href="#" class="btn btn-orange">Забронировать</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-content-item">
+                    <div class="image-holder">
+                        <img src="img/filter2.jpg" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h5>Ipsum</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="item-content-bottom">
+                            <div class="stars-holder">
+                                <div class="stars" data-score="4.5"></div>
+                            </div>
+                            <hr>
+                            <div class="clearfix">
+                                <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                                <div class="btn-orange-holder"><a href="#" class="btn btn-orange">Забронировать</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-content-item">
+                    <div class="image-holder">
+                        <img src="img/filter1.jpg" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h5>The Kitchen</h5>
+                        <p>При заказе от 1500 руб. Паста карбонара в подарок!</p>
+                        <div class="item-content-bottom">
+                            <div class="stars-holder">
+                                <div class="stars" data-score="4.5"></div>
+                            </div>
+                            <hr>
+                            <div class="clearfix">
+                                <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                                <div class="btn-orange-holder"><a href="#" class="btn btn-orange">Забронировать</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-content-item">
+                    <div class="image-holder">
+                        <img src="img/filter2.jpg" alt="">
+                    </div>
+                    <div class="item-content">
+                        <h5>0.75</h5>
+                        <p>При заказе от 0.75. Еще 0,5 в подарок!</p>
+                        <div class="item-content-bottom">
+                            <div class="stars-holder">
+                                <div class="stars" data-score="4.5"></div>
+                            </div>
+                            <hr>
+                            <div class="clearfix">
+                                <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                                <div class="btn-orange-holder"><a href="#" class="btn btn-orange">Забронировать</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="big-map"></div>
 </div><!-- Map end -->
 
