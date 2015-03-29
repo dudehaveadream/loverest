@@ -83,6 +83,21 @@
                     width: 100%;
                     height: 390px;
                 }
+                .discount {
+                    width: 86px;
+                    height: 46px;
+                    background: url(../img/icons/discount_big.png) no-repeat;
+                    position: absolute;
+                    top: 25px;
+                    right: -8px;
+                    font-size: 18px;
+                    font-weight: $bold;
+                    color: #ffffff;
+                    padding-top: 17px;
+                    padding-left: 15px;
+                    text-align: center;
+                    text-shadow: 1px 1px 0 #790f0c;
+                }
             }
             &-inner {
                 padding: 15px 35px;
@@ -104,6 +119,7 @@
         }
         .developments-tabs {
             position: relative;
+            padding: 0;
             @include border-radius (0 20px 20px 20px);
             .tabs {
                 border-top: 1px solid #c5c5c5;
@@ -167,10 +183,31 @@
                             }
                         }
                     }
+                    &.actions {
+                        .left-image {
+                            background: url(../img/icons/actions.png) no-repeat;
+                        }
+                        &.current {
+                            .left-image {
+                                background-position: left bottom;
+                            }
+                        }
+                    }
+                    &.developments {
+                        .left-image {
+                            background: url(../img/icons/developments.png) no-repeat;
+                        }
+                        &.current {
+                            .left-image {
+                                background-position: left bottom;
+                            }
+                        }
+                    }
                 }
             }
             .box {
                 display: none;
+                padding: 15px 35px;
                 .description {
                     h5 {
                         font-weight: $semibold;
@@ -178,6 +215,90 @@
                     }
                     p {
                         line-height: 1.3;
+                    }
+                }
+                &.tabs-list {
+                    padding: 40px 0;
+                    .tabs-list-item {
+                        padding: 20px 40px;
+                        border-bottom: 1px solid #d2d2d2;
+                        position: relative;
+                        background: #ffffff;
+                        @include clearfix;
+                        @include transition (all, 0.4s, linear);
+                        .image-holder {
+                            float: left;
+                            width: 250px;
+                            img {
+                                width: 100%;
+                                height: 106px;
+                                @include border-radius (25px);
+                            }
+                        }
+                        .text-holder {
+                            width: 320px;
+                            float: right;
+                            position: relative;
+                            min-height: 105px;
+                            padding-top: 10px;
+                            h5 {
+                                font-size: 16px;
+                                font-weight: $semibold;
+                                margin-bottom: 5px;
+                            }
+                            p {
+                                font-size: 12px;
+                                line-height: 1.4;
+                                margin-bottom: 5px;
+                            }
+                            .likes {
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                cursor: pointer;
+                                margin-top: 10px;
+                                @include transition (all, 0.3s, linear);
+                                .like {
+                                    display: inline-block;
+                                    width: 19px;
+                                    height: 19px;
+                                    background: url(../img/icons/like.png);
+                                    @include transition (all, 0.3s, linear);
+                                }
+                                .count {
+                                    font-size: 12px;
+                                    color: #666666;
+                                    float: right;
+                                    margin-top: 5px;
+                                    margin-left: 10px;
+                                }
+                                &:hover {
+                                    .like {
+                                        background: url(../img/icons/like_h.png);
+                                    }
+                                    .count {
+                                        color: #0068bc;
+                                    }
+                                }
+                            }
+                        }
+                        .discount {
+                            position: absolute;
+                            top: -6px;
+                            right: -7px;
+                            background: url(../img/icons/discount.png) no-repeat;
+                            width: 67px;
+                            height: 36px;
+                            font-size: 14px;
+                            font-weight: $bold;
+                            color: $white;
+                            text-align: center;
+                            padding: 14px 0 0 10px;
+                        }
+                        &:hover {
+                            @include box-shadow (inset 0 0 8px 2px rgba(0,0,0,.1));
+                            background: url(../img/bg/tabs_list_bg.jpg) repeat-x;
+                        }
                     }
                 }
             }
