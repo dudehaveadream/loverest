@@ -100,19 +100,36 @@
                 padding: 4px;
                 background: rgba(255,255,255,.6);
                 border: 1px solid #4084bc;
+                position: relative;
                 @include border-radius (20px);
                 @include box-shadow (0 1px 3px rgba(64,132,188,.8));
+                &:before {
+                    content: '';
+                    background: #9cadbc;
+                    width: 1px;
+                    height: 30px;
+                    position: absolute;
+                    left: 42px;
+                    top: 4px;
+                }
             }
             input {
                 width: 100%;
                 height: 30px;
-                padding: 0 30px;
+                font-size: 15px;
+                color: #8d9195;
+                padding: 0 15px 0 45px;
                 border: 1px solid #9cadbc;
-                background: rgba(255,255,255,.6);
                 outline: none;
-                @include border-radius (20px);
                 box-shadow: 0 1px 0 rgba(255,255,255,.8),
                             inset 0 1px 3px rgba(0,0,0,.3);
+                @include border-radius (20px);
+                &.phone {
+                    background: url(../img/icons/smartphone.png) no-repeat center left 16px, rgba(255,255,255,.6);
+                }
+                &.pswrd {
+                    background: url(../img/icons/lock.png) no-repeat center left 13px, rgba(255,255,255,.6);
+                }
             }
         }
         .btns-holder {

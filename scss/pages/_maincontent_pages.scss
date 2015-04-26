@@ -137,7 +137,7 @@
                     background: #dfe5e5;
                     cursor: pointer;
                     float: left;
-                    width: 140px;
+                    width: 150px;
                     text-align: center;
                     font-size: 12px;
                     font-weight: &bold;
@@ -203,6 +203,17 @@
                             }
                         }
                     }
+                    &.masters {
+                        .left-image {
+                            width: 36px;
+                            background: url(../img/icons/hair.png) no-repeat;
+                        }
+                        &.current {
+                            .left-image {
+                                background-position: left bottom;
+                            }
+                        }
+                    }
                 }
             }
             .box {
@@ -221,6 +232,9 @@
                     padding: 40px 0;
                     .tabs-list-item {
                         padding: 20px 40px;
+                        border-top: 1px solid transparent;
+                        border-left: 1px solid transparent;
+                        border-right: 1px solid transparent;
                         border-bottom: 1px solid #d2d2d2;
                         position: relative;
                         background: #ffffff;
@@ -229,10 +243,14 @@
                         .image-holder {
                             float: left;
                             width: 250px;
+                            overflow: hidden;
+                            position: relative;
+                            z-index: 1;
+                            @include border-radius (25px);
                             img {
                                 width: 100%;
                                 height: 106px;
-                                @include border-radius (25px);
+                                @include transition (all, 0.4s, linear);
                             }
                         }
                         .text-holder {
@@ -296,8 +314,14 @@
                             padding: 14px 0 0 10px;
                         }
                         &:hover {
-                            @include box-shadow (inset 0 0 8px 2px rgba(0,0,0,.1));
-                            background: url(../img/bg/tabs_list_bg.jpg) repeat-x;
+                            z-index: 100;
+                            border: 1px solid #5eb0fc;
+                            @include box-shadow (0 0 8px 2px rgba(0,0,0,.2));
+                            .image-holder {
+                                img {
+                                    @include scale(1.05);
+                                }
+                            }
                         }
                     }
                 }
@@ -545,14 +569,28 @@
             position: relative;
             @include border-radius (25px);
             @include box-shadow (0 1px 5px rgba(0,0,0,.2));
-            &:hover {
-                opacity: .8;
-            }
             img {
-                float: right;
-                position: absolute;
-                top: 6px;
-                right: 6px;
+              float: right;
+              position: absolute;
+              top: 6px;
+              right: 6px;
+              @include transition (all, 0.4s, linear);
+              &.stat {
+                opacity: 1;
+              }
+              &.hov {
+                opacity: 0;
+              }
+            }
+            &:hover {
+              img {
+                &.stat {
+                  opacity: 0;
+                }
+                &.hov {
+                  opacity: 1;
+                }
+              }
             }
         }
     }

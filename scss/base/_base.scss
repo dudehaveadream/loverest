@@ -46,9 +46,10 @@ a {
 .container {
   width: $container-width;
   margin: auto;
+  padding: 0 15px;
 }
 .section {
-  min-width: $container-width;
+  min-width: 1030px
 }
 
 .big-like {

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $("input[name='phone']").inputmask("+7(999) 999 - 99 - 99" ,{ clearMaskOnLostFocus: false });
+
     $("#gotop").click(function() {
       $("html, body").animate({ scrollTop: 0 }, "slow");
       return false;

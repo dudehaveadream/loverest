@@ -20,6 +20,7 @@
     <script src="js/scrollbar.min.js"></script>
     <script src="js/raty.js" type="text/javascript"></script>
     <script src="js/magnificpopup.min.js" type="text/javascript"></script>
+    <script src="js/bxslider.js" type="text/javascript"></script>
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/inputmask.js"></script>
     <script>
@@ -77,7 +78,20 @@
             half: true,
             starHalf : 'img/raty/star-half.png',
             starOff  : 'img/raty/star-off.png',
-            starOn   : 'img/raty/star-on.png'
+            starOn   : 'img/raty/star-on.png',
+            readOnly: true
+        });
+
+        $('.slider').bxSlider({
+            mode: 'fade',
+            auto: true,
+            controls: true,
+            captions: true
+        });
+
+        $('ul.tabs').on('click', 'li:not(.current)', function() {
+            $(this).addClass('current').siblings().removeClass('current')
+                .parents('div.section').find('div.box').eq($(this).index()).fadeIn(150).siblings('div.box').hide();
         });
 
     });
@@ -172,83 +186,230 @@
 <div class="section">
     <div class="container main-content">
         <div class="content-left">
-            <div class="content-left-inner">
-                <div class="action-single">
-                    <h4>Пицца Барбекю Bbq с курицей в подарок!</h4>
-                    <p><span class="date">31.12.2014, <span class="hour">22<span class="minutes">00</span></span></span> Добро пожаловать в сеть ресторанов Хмельная Пражечка, где Вы можете провести приятный вечерок, сэкономив 40% личного бюджета! Фирменное пиво, особые и полюбившиеся закуски, огромные порции салатов и горячие блюда – приходите большой компанией, веселитесь, отдыхайте в тепле и уюте! Вкуснейшие салаты, море закусок под пиво, горячие блюда из мяса, птицы или рыбы, а также традиционное чешское пиво в сети ресторанов Хмельная Пражечка! Скидка 40% на все меню и бар.</p>
-                    <p>Фирменное пиво, особые и полюбившиеся закуски, огромные порции салатов и горячие блюда – приходите компанией, веселитесь, отдыхайте в тепле и уюте!</p>
-                    <div class="image-holder"><img src="img/action_single.jpg" alt=""></div>
-                    <div class="share">
-                        <img src="img/share.jpg" alt="">
+            <div class="content-left-inner developments-single">
+                <div class="developments-single-slider">
+                    <ul class="slider">
+                        <li><img src="img/slider/dep_slide1.jpg" /></li>
+                        <li><img src="img/slider/dep_slide2.jpg" /></li>
+                        <li><img src="img/slider/dep_slide3.jpg" /></li>
+                    </ul>
+                    <div class="discount">- 20%</div>
+                </div>
+                <div class="developments-single-inner">
+                    <h4>The Kitchen</h4>
+                    <div class="rating">
+                        <div class="stars" data-score="4.5"></div>
                         <div class="big-like"><span class="like"></span><span class="count">1025</span></div>
                     </div>
+                    <img src="img/share.jpg" alt="">
                 </div>
-                <div class="comments-holder">
-                    <div class="head">
-                        <h4>Комментарии</h4>
+            </div>
+            <div class="content-left-inner developments-tabs">
+                <ul class="tabs">
+                    <li class="descrip current"><span class="left-image"></span><span class="text">Описание</span></li>
+                    <li class="actions"><span class="left-image"></span><span class="text">Акции</span></li>
+                    <li class="masters"><span class="left-image"></span><span class="text">Мастера (123)</span></li>
+                    <li class="reviews"><span class="left-image"></span><span class="text">Отзывы (123)</span></li>
+                </ul>
+
+                <div class="box ">
+                    <div class="description">
+                        <h5>О ресторане</h5>
+                        <p>Ресторан «Сим Сити» любят влюбленные и семейные пары с детьми. Первые – за интимную атмосферу, предупредительных официантов, цветы на столе, вторые – за детский уголок, где дети хорошо проводят время, и можно спокойно посидеть вдвоем. Но те и другие сходятся во мнении, что здесь вкусно и разнообразно готовят. Кухня заведения давно заслужила популярность у москвичей, поэтому «Сим Сити» называют одним из лучших ресторанов в Марьино. Подают здесь лучшие блюда азербайджанской, кавказской и европейской кухни. При желании, в «Сим Сити» можно и поесть вкусно, и от души повеселиться. По вечерам здесь традиционны шоу программы с живой музыкой и танцы до утра, гостям предлагают попеть караоке, покурить кальян, посмотреть спортивные трансляции.</p>
+                        <h5>Интерьер</h5>
+                        <p>Снаружи о ресторане трудно судить объективно, его внутреннее содержание гораздо богаче и интереснее фасада. Новое видение заведение начинается сразу с летней веранды, которая разместилась на крыше, рядом с искусственным водоемом. Здесь уютно и всегда прохладно. Главный зал ресторана, с колоннами, идеальным ореховым паркетом, алым убранством столов, точечным освещением, выглядит торжественно и празднично. Банкетный зал, напротив, белоснежно-белый, томный и загадочный. Есть еще приятная кальянная, с многочисленными квадратными диванами, подушками, восточными коврами и VIP-кабинки, для любителей уединенной трапезы.</p>
+                        <h5>Кухня</h5>
+                        <p>Шеф-повар ресторана "Сим Сити" знаток и любитель азербайджанской кухни, отдает ей явное предпочтение. Советуем и вам сделать тоже самое. Заслуживают внимания, причем самого пристального, азербайджанские национальные супы. Официанты вам любезно объяснят, если не знаете, что соютма готовится на бульоне с добавлением бараньего курдюка; кюфта-бозбаш – это прозрачный бульон с тефтелями из баранины с алычой; в дюшбару добавляют маленькие азербайджанские пельмени и мяту, а вы уже выберете, что вам больше понравится. А можно сразу взять национальные пельмени с бараньим фаршем в бульоне, которые называются кюрза, однозначно, не пожалеете. Среди вторых блюд вам предстоит сделать непростой выбор между джыз-бызом – это жареные баранья печень, почки, сердце с картофелем и репчатым луком; пловом по-узбекски и хинкали из тонкого теста. Это если не соблазнитесь духмяным жарким по-азербайджански, которое готовится исключительно на двоих из телятины, баранины, свинины и птицы.</p>
                     </div>
-                    <div class="btn-container">
-                        <div class="btn-orange-holder modal-holder">
-                            <a href="#comment-popup" class="btn btn-sky"  data-effect="mfp-zoom-in"><span class="left-image"><img src="img/icons/plus_small.png" alt=""></span><span class="main-text">Добавить комментарий</span></a>
+                </div>
+
+                <div class="box tabs-list">
+                    <div class="tabs-list-item">
+                        <div class="image-holder">
+                            <img src="img/tabs1.jpg" alt="">
                         </div>
+                        <div class="text-holder">
+                            <h5>Куриное филе по-турецки в подарок!</h5>
+                            <p>При заказе от 800 руб. Рис с курицей или Удон с курицей на выбор в подарок!</p>
+                            <a href="#">Подробнее →</a>
+                            <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        </div>
+                        <div class="discount">-20%</div>
                     </div>
-                    <div class="comments-inner">
-                        <div class="comments-inner-item">
-                            <div class="message left-message">
-                                <div class="author">
-                                    <div class="avatar"><img src="img/avatar.jpg" alt=""></div>
-                                    <div class="name">
-                                        <h5>Алексей Гербовой</h5>
-                                        <p class="date">03 июня 2014</p>
-                                    </div>
-                                </div>
-                                <div class="text-holder">
-                                    <p>Предложили отличный столик. Обслуживание хорошее, меню тоже.Вид прекрасный. Все отлично, очень понравилось</p>
-                                </div>
-                            </div>
-                            <div class="message right-message">
-                                <div class="author">
-                                    <div class="name">
-                                        <h5>The Kitchen</h5>
-                                        <p class="date">03 июня 2014</p>
-                                    </div>
-                                </div>
-                                <div class="text-holder">
-                                    <p>Спасибо большое, приходите еще!</p>
-                                </div>
-                            </div>
+                    <div class="tabs-list-item">
+                        <div class="image-holder">
+                            <img src="img/tabs2.jpg" alt="">
                         </div>
-                        <div class="comments-inner-item">
-                            <div class="message left-message">
-                                <div class="author">
-                                    <div class="avatar"><img src="img/avatar.jpg" alt=""></div>
-                                    <div class="name">
-                                        <h5>Зоя Шаргатова</h5>
-                                        <p class="date">20 Мая 2014</p>
-                                    </div>
-                                </div>
-                                <div class="text-holder">
-                                    <p>Столик выделили хороший, обслуживание нормальное. У ресторана плохая навигация. При проходе через Афимолл направляют по страшным катакомбам, когда можно пройти по улице 20 метров и попасть в ресторан через главный вход в башню.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comments-inner-item">
-                            <div class="message left-message">
-                                <div class="author">
-                                    <div class="avatar"><img src="img/avatar.jpg" alt=""></div>
-                                    <div class="name">
-                                        <h5>Ширяев Алексей</h5>
-                                        <p class="date">15 Мая 2014</p>
-                                    </div>
-                                </div>
-                                <div class="text-holder">
-                                    <p>Громкая музыка, не слышно собеседника, весь зал прокурен. Вообще ерунда какая-то, а не ресторан.</p>
-                                </div>
-                            </div>
+                        <div class="text-holder">
+                            <h5>Пицца Барбекю Bbq с курицей в подарок!</h5>
+                            <p>При заказе от 1300руб. Куриное филе по-турецки в подарок! </p>
+                            <a href="#">Подробнее →</a>
+                            <div class="likes"><span class="like"></span><span class="count">1025</span></div>
                         </div>
                     </div>
-                    <div class="more-holder">
-                        <a href="#" class="more">еще комментарии<img src="img/icons/more_arrow.png" alt="" class="stat"><img src="img/icons/more_arrow_h.png" alt="" class="hov"></a>
+                    <div class="tabs-list-item">
+                        <div class="image-holder">
+                            <img src="img/tabs1.jpg" alt="">
+                        </div>
+                        <div class="text-holder">
+                            <h5>Куриное филе по-турецки в подарок!</h5>
+                            <p>При заказе от 800 руб. Рис с курицей или Удон с курицей на выбор в подарок!</p>
+                            <a href="#">Подробнее →</a>
+                            <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        </div>
+                        <div class="discount">-20%</div>
+                    </div>
+                    <div class="tabs-list-item">
+                        <div class="image-holder">
+                            <img src="img/tabs2.jpg" alt="">
+                        </div>
+                        <div class="text-holder">
+                            <h5>Пицца Барбекю Bbq с курицей в подарок!</h5>
+                            <p>При заказе от 1300руб. Куриное филе по-турецки в подарок! </p>
+                            <a href="#">Подробнее →</a>
+                            <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        </div>
+                    </div>
+                    <div class="tabs-list-item">
+                        <div class="image-holder">
+                            <img src="img/tabs1.jpg" alt="">
+                        </div>
+                        <div class="text-holder">
+                            <h5>Куриное филе по-турецки в подарок!</h5>
+                            <p>При заказе от 800 руб. Рис с курицей или Удон с курицей на выбор в подарок!</p>
+                            <a href="#">Подробнее →</a>
+                            <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        </div>
+                        <div class="discount">-20%</div>
+                    </div>
+                </div>
+
+                <div class="box visible">
+            <div class="categories-list-inner master-list">
+                <div class="offer-item">
+                    <div class="image-holder">
+                        <img src="img/slider/carousel1.jpg" alt="">
+                        <div class="discount">- 50%</div>
+                    </div>
+                    <div class="offer-item-content">
+                        <h5>Таня Чепурная</h5>
+                        <p>Стилист</p>
+                        <hr>
+                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
+                    </div>
+                </div>
+                <div class="offer-item">
+                    <div class="image-holder">
+                        <img src="img/slider/carousel1.jpg" alt="">
+                    </div>
+                    <div class="offer-item-content">
+                        <h5>Таня Чепурная</h5>
+                        <p>Стилист</p>
+                        <hr>
+                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
+                    </div>
+                </div>
+                <div class="offer-item">
+                    <div class="image-holder">
+                        <img src="img/slider/carousel1.jpg" alt="">
+                    </div>
+                    <div class="offer-item-content">
+                        <h5>Таня Чепурная</h5>
+                        <p>Стилист</p>
+                        <hr>
+                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
+                    </div>
+                </div>
+                <div class="offer-item">
+                    <div class="image-holder">
+                        <img src="img/slider/carousel1.jpg" alt="">
+                        <div class="discount">- 50%</div>
+                    </div>
+                    <div class="offer-item-content">
+                        <h5>Таня Чепурная</h5>
+                        <p>Стилист</p>
+                        <hr>
+                        <div class="likes"><span class="like"></span><span class="count">1025</span></div>
+                        <div class="btn-orange-holder"><a href="#" class="btn btn-orange">записаться</a></div>
+                    </div>
+                </div>
+            </div>
+                        <div class="more-holder">
+                            <a href="#" class="more">еще отзывы<img src="img/icons/more_arrow.png" alt="" class="stat"><img src="img/icons/more_arrow_h.png" alt="" class="hov"></a>
+                        </div>
+                </div>
+
+                <div class="box">
+                    <div class="comments-holder">
+                        <div class="btn-container">
+                            <div class="btn-orange-holder modal-holder">
+                                <a href="#comment-popup" class="btn btn-sky"  data-effect="mfp-zoom-in"><span class="left-image"><img src="img/icons/plus_small.png" alt=""></span><span class="main-text">Оставить отзыв</span></a>
+                            </div>
+                        </div>
+                        <div class="comments-inner">
+                            <div class="comments-inner-item">
+                                <div class="message left-message">
+                                    <div class="author">
+                                        <div class="avatar"><img src="img/avatar.jpg" alt=""></div>
+                                        <div class="name">
+                                            <h5>Алексей Гербовой</h5>
+                                            <p class="date">03 июня 2014</p>
+                                        </div>
+                                        <div class="stars" data-score="3.5"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <p>Предложили отличный столик. Обслуживание хорошее, меню тоже.Вид прекрасный. Все отлично, очень понравилось</p>
+                                    </div>
+                                </div>
+                                <div class="message right-message">
+                                    <div class="author">
+                                        <div class="name">
+                                            <h5>The Kitchen</h5>
+                                            <p class="date">03 июня 2014</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <p>Спасибо большое, приходите еще!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments-inner-item">
+                                <div class="message left-message">
+                                    <div class="author">
+                                        <div class="avatar"><img src="img/avatar.jpg" alt=""></div>
+                                        <div class="name">
+                                            <h5>Зоя Шаргатова</h5>
+                                            <p class="date">20 Мая 2014</p>
+                                        </div>
+                                        <div class="stars" data-score="3"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <p>Столик выделили хороший, обслуживание нормальное. У ресторана плохая навигация. При проходе через Афимолл направляют по страшным катакомбам, когда можно пройти по улице 20 метров и попасть в ресторан через главный вход в башню.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments-inner-item">
+                                <div class="message left-message">
+                                    <div class="author">
+                                        <div class="avatar"><img src="img/avatar.jpg" alt=""></div>
+                                        <div class="name">
+                                            <h5>Ширяев Алексей</h5>
+                                            <p class="date">15 Мая 2014</p>
+                                        </div>
+                                        <div class="stars" data-score="1.5"></div>
+                                    </div>
+                                    <div class="text-holder">
+                                        <p>Громкая музыка, не слышно собеседника, весь зал прокурен. Вообще ерунда какая-то, а не ресторан.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-holder">
+                            <a href="#" class="more">еще отзывы<img src="img/icons/more_arrow.png" alt="" class="stat"><img src="img/icons/more_arrow_h.png" alt="" class="hov"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -424,9 +585,9 @@
 
 <!-- Modal end -->
 <div id="comment-popup" class="main-popup mfp-with-anim mfp-hide">
-    <h4>Ваш комментарий</h4>
+    <h4>Ваш отзыв</h4>
     <div class="comment-social">
-        <h5>Чтобы оставить комментарий, войдите с помощью вашей любимой социальной сети: </h5>
+        <h5>Чтобы оставить отзыв, войдите с помощью вашей любимой социальной сети: </h5>
         <div class="social">
             <a href="#"><img src="img/footer/vk.png" alt=""></a>
             <a href="#"><img src="img/footer/fb.png" alt=""></a>
@@ -438,10 +599,11 @@
         <p>Это безопасно. Авторизация происходит на сайте соцсети.</p>
         <p>Мы не видим и не сохраняем ваш пароль.</p>
         <form action="">
+            <h5>Поставьте оценку заведению:<div class="stars" data-score="0"></div></h5>
             <textarea placeholder="Текст вашего отзыва..."></textarea>
             <div class="btn-container">
                 <div class="btn-orange-holder">
-                    <a href="#" class="btn btn-sky"><span class="left-image"><img src="img/icons/plus_small.png" alt=""></span><span class="main-text">Добавить комментарий</span></a>
+                    <a href="#" class="btn btn-sky"><span class="left-image"><img src="img/icons/plus_small.png" alt=""></span><span class="main-text">Оставить отзыв</span></a>
                 </div>
             </div>
         </form>

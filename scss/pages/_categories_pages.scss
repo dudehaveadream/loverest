@@ -1,27 +1,28 @@
 .breadcrumbs-section {
-  padding: 15px 0;
+  padding: 20px 0 15px;
   .breadcrumbs {
     text-align: center;
     li {
       display: inline-block;
       a {
         vertical-align: middle;
+        color: #a6a6a6;
+        border: none;
+        font-size: 17px;
       }
       &:last-child {
         a {
-          font-size: 18px;
-          font-weight: $bold;
-          font-style: italic;
-          color: #303030;
-          border-color: transparent;
+          color: #0068bc;
           cursor: default;
         }
       }
       &:after {
-        content: '>';
-        font-size: 18px;
-        color: #303030;
-        margin-left: 5px;
+        content: '';
+        background: url(../img/icons/big_arrow_right.png) no-repeat;
+        width: 10px;
+        height: 18px;
+        margin-left: 7px;
+        margin-right: 2px;
         margin-top: 1px;
         float: right;
       }
@@ -89,24 +90,41 @@
         position: relative;
         @include border-radius (25px);
         @include box-shadow (0 1px 5px rgba(0,0,0,.2));
-        &:hover {
-          opacity: .8;
-        }
         img {
           float: right;
           position: absolute;
           top: 6px;
           right: 6px;
+          @include transition (all, 0.4s, linear);
+          &.stat {
+            opacity: 1;
+          }
+          &.hov {
+            opacity: 0;
+          }
+        }
+        &:hover {
+          img {
+            &.stat {
+              opacity: 0;
+            }
+            &.hov {
+              opacity: 1;
+            }
+          }
         }
       }
         #gotop {
           width: 53px;
           height: 53px;
           position: absolute;
-          top: -5px;
-          right: -65px;
+          top: -3px;
+          right: 275px;
           border: none;
           background: url(../img/icons/gotop.png) no-repeat;
+          &:hover {
+            background: url(../img/icons/gotop_h.png) no-repeat;
+          }
         }
     }
     &-inner {
@@ -117,7 +135,7 @@
             margin-right: 20px;
             margin-bottom: 20px;
             &-content {
-                height: 141px;
+                height: 142px;
                 hr {
                     position: absolute;
                     left: 20px;
@@ -157,9 +175,68 @@
                   }
                 }
             }
-            &:nth-child(3n+3) {
-                margin-right: 0;
+        }
+        &:nth-child(3n+3) {
+           margin-right: 0;
+        }
+        &.master-list {
+          padding-bottom: 20px;
+          .offer-item {
+                height: 310px;
+                width: 282px;
+                box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
+                margin-right: 36px;
+                &-content {
+                  height: 120px;
+                  padding: 15px 20px 30px 20px;
+                  h5 {
+                    font-size: 14px;
+                    font-weight: 700;
+                  }
+                  p {
+                    font-size: 12px;
+                  }
+                }
+                .image-holder {
+                  height: 190px;
+                  img {
+                    height: 190px;
+                    width: 100%;
+                  }
+                }
+                hr {
+                  width: 245px;
+                }
+          &:nth-child(2n+2) {
+            margin-right: 0;
+          }
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,6 +18,7 @@
     <script src="js/scrollbar.min.js"></script>
     <script src="js/raty.js" type="text/javascript"></script>
     <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/inputmask.js"></script>
     <script>
     $(document).ready(function(){
 
@@ -51,7 +52,7 @@
 </head>
 <body>
 
-<div class="header-section">
+<div class="section header-section">
     <div class="container">
         <div class="header-login">
             <div class="close-holder">
@@ -67,10 +68,10 @@
                 </div>
                 <div class="header-login-section inputs-holder">
                     <div class="input-holder">
-                        <input type="text">
+                        <input type="text" class="phone" name="phone" placeholder="+7(___) ___-__-__">
                     </div>
                     <div class="input-holder">
-                        <input type="text">
+                        <input type="text" class="pswrd">
                     </div>
                 </div>
                 <div class="header-login-section btns-holder">
@@ -220,22 +221,27 @@
     </div>
 </div><!-- Categories end -->
 
-<div class="section page-nav">
-    <div class="container">
-        <div class="page-nav-inner">
-            <div class="page-nav-item">
-                <a href="salons.html" class="list"><span class="left-image"></span><span class="text">сПИСОК</span></a>
-                <a href="#" class="map active"><span class="left-image"></span><span class="text">КАРТА</span></a>
+<div class="map-section">
+    <div class="section page-nav map-nav">
+        <div class="container">
+            <div class="page-nav-inner">
+                <div class="page-nav-item">
+                    <a href="salons.html" class="list"><span class="left-image"></span><span class="text">сПИСОК</span></a>
+                    <a href="#" class="map active"><span class="left-image"></span><span class="text">КАРТА</span></a>
+                </div>
             </div>
         </div>
-    </div>
-</div><!-- Page nav end -->
-
-<div class="map-section">
+    </div><!-- Page nav end -->
     <div class="filter-container">
         <div class="filter-inner">
             <div class="filter-top">
                 <div class="search-container">
+                    <div class="search-holder">
+                        <input type="text" class="search" placeholder="Поиск по названию">
+                        <input type="button">
+                    </div>
+                </div>
+                <!--<div class="search-container">
                     <div class="left">
                         <div class="search-holder">
                             <input type="text" class="search" placeholder="Поиск по названию">
@@ -267,7 +273,7 @@
                             <input type="checkbox" id="pizza">
                             <label for="pizza">Пиццерии</label>
                         </div>
-                        <div class="more-holder">
+                        <div class="filter-more">
                             <a href="#" class="more">Еще →</a>
                         </div>
                     </div>
@@ -285,7 +291,7 @@
                             <input type="checkbox" id="wifi">
                             <label for="wifi">Wi - fi</label>
                         </div>
-                        <div class="more-holder">
+                        <div class="filter-more">
                             <a href="#" class="more">Еще →</a>
                         </div>
                     </div>
@@ -303,11 +309,11 @@
                             <input type="checkbox" id="caucasian">
                             <label for="caucasian">Кавказская</label>
                         </div>
-                        <div class="more-holder">
+                        <div class="filter-more">
                             <a href="#" class="more">Еще →</a>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="filter-content">
                 <div class="filter-content-item">
@@ -354,12 +360,7 @@
                     </div>
                     <div class="item-content">
                         <h5>Ipsum</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
                         <div class="item-content-bottom">
                             <div class="stars-holder">
                                 <div class="stars" data-score="4.5"></div>
@@ -415,105 +416,6 @@
     </div>
     <div id="big-map"></div>
 </div><!-- Map end -->
-
-<div class="section footer-section">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="container">
-                <div class="left">
-                    <div class="left-inner">
-                        <a href="#" class="left-item">
-                            <div class="image-holder"><img src="img/footer/1.png" alt=""></div>
-                            <h5>Акции</h5>
-                            <p>Ни дня без халявы! Наслаждайтесь лучшим сервисом даром!</p>
-                        </a>
-                    </div>
-                    <div class="left-inner">
-                        <a href="#" class="left-item">
-                            <div class="image-holder"><img src="img/footer/2.png" alt=""></div>
-                            <h5>События</h5>
-                            <p>Будьте в курсе всех событий с нами! Не пропустайте тусовок!</p>
-                        </a>
-                    </div>
-                    <div class="left-inner">
-                        <a href="#" class="left-item">
-                            <div class="image-holder"><img src="img/footer/3.png" alt=""></div>
-                            <h5>Блог</h5>
-                            <p>Актульные новости всегда под рукой. Подписывайтесь на  блог!</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="right">
-                    <h3>Love Rest</h3>
-                    <p>«loverest.kz» — это совершенно новый способ получения предварительных заказов. Мы делаем так, чтобы вы экономили свое время и получали самые удобные места в любых заведениях города. Будь это ужин в ресторане или шиномонтаж, поход к стилисту или вечер в киноклубе — «loverest» поможет избежать очереди и получить желаемое именно тогда, когда вам это нужно.</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-center">
-            <div class="container">
-                <div class="left">
-                    <div class="left-item">
-                        <h5>Компания</h5>
-                        <ul>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Вакансии на loverest</a></li>
-                        </ul>
-                    </div>
-                    <div class="left-item">
-                        <h5>Клиентам</h5>
-                        <ul>
-                            <li><a href="#">Обратная связь</a></li>
-                            <li><a href="#">Как это работает?</a></li>
-                            <li><a href="#">Вопросы и ответы</a></li>
-                            <li><a href="#">Публичная оферта</a></li>
-                        </ul>
-                    </div>
-                    <div class="left-item">
-                        <h5>Партнерам</h5>
-                        <ul>
-                            <li><a href="#">Для вашего бизнеса</a></li>
-                            <li><a href="#">Франшиза</a></li>
-                            <li><a href="#">Партнерская программа сайтам</a></li>
-                        </ul>
-                        <a href="#" class="btn btn-blue single"><span class="main-text">Вход для партнеров</span></a>
-                        <a href="#" class="btn btn-blue"><span class="left-image"><img src="img/icons/plus.png" alt=""></span><span class="main-text">Добавить заведение</span></a>
-                    </div>
-                    <div class="left-item">
-                        <h5>Полезные ссылки</h5>
-                        <ul>
-                            <li><a href="#">Рестораны, караоке и.т.д</a></li>
-                            <li><a href="#">Банкеты</a></li>
-                            <li><a href="#">Салоны красоты и мастера</a></li>
-                            <li><a href="#">Зоны отдыха</a></li>
-                            <li><a href="#">Бани, сауны</a></li>
-                            <li><a href="#">Бильярд</a></li>
-                            <li><a href="#">Доставка еды</a></li>
-                            <li><a href="#">Доставка цветов</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="social">
-                        <a href="#"><img src="img/footer/vk.png" alt=""></a>
-                        <a href="#"><img src="img/footer/fb.png" alt=""></a>
-                        <a href="#"><img src="img/footer/mail.png" alt=""></a>
-                        <a href="#"><img src="img/footer/odn.png" alt=""></a>
-                        <a href="#"><img src="img/footer/tw.png" alt=""></a>
-                        <a href="#"><img src="img/footer/insta.png" alt=""></a>
-                        <p>Мы в соц сетях</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <p>&copy; 2015 Loverest&#8482;  -  <a href="#">Карта сайта</a></p>
-            <p>Все права защищены</p>
-        </div>
-    </div>
-</div><!-- Footer end -->
 
 </body>
 </html>

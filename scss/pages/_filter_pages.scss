@@ -95,7 +95,70 @@
             margin-right: 151px;
         }
     }
+    &.map-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        margin: 0;
+    }
 }
+
+
+        .more-holder {
+          text-align: center;
+          position: relative;
+          .more {
+            padding: 15px 50px 15px 25px;
+            display: inline-block;
+            border: none;
+            font-size: 16px;
+            font-weight: $semibold;
+            text-transform: uppercase;
+            color: $black;
+            background: #f4f4f4;
+            border: 1px solid #bdbdbd;
+            position: relative;
+            @include border-radius (25px);
+            @include box-shadow (0 1px 5px rgba(0,0,0,.2));
+            img {
+              float: right;
+              position: absolute;
+              top: 6px;
+              right: 6px;
+              @include transition (all, 0.4s, linear);
+              &.stat {
+                opacity: 1;
+              }
+              &.hov {
+                opacity: 0;
+              }
+            }
+            &:hover {
+              img {
+                &.stat {
+                  opacity: 0;
+                }
+                &.hov {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+            #gotop {
+              width: 53px;
+              height: 53px;
+              position: absolute;
+              top: -3px;
+              right: 185px;
+              border: none;
+              background: url(../img/icons/gotop.png) no-repeat;
+              &:hover {
+                background: url(../img/icons/gotop_h.png) no-repeat;
+              }
+            }
+        }
 
 .main-content {
     position: relative;
@@ -122,42 +185,6 @@
         }
         .offer-item:nth-child(2n+2) {
             margin-right: 0;
-        }
-        .more-holder {
-          text-align: center;
-          position: relative;
-          .more {
-            padding: 15px 50px 15px 25px;
-            display: inline-block;
-            border: none;
-            font-size: 16px;
-            font-weight: $semibold;
-            text-transform: uppercase;
-            color: $black;
-            background: #f4f4f4;
-            border: 1px solid #bdbdbd;
-            position: relative;
-            @include border-radius (25px);
-            @include box-shadow (0 1px 5px rgba(0,0,0,.2));
-            &:hover {
-              opacity: .8;
-            }
-            img {
-              float: right;
-              position: absolute;
-              top: 6px;
-              right: 6px;
-            }
-          }
-            #gotop {
-              width: 53px;
-              height: 53px;
-              position: absolute;
-              top: -5px;
-              right: -65px;
-              border: none;
-              background: url(../img/icons/gotop.png) no-repeat;
-            }
         }
     }
     .sidebar-left {
@@ -209,7 +236,7 @@
                     font-weight: $semibold;
                     color: #303030;
                     text-transform: uppercase;
-                    border-bottom: 1px dashed #303030;
+                    border-color: transparent;
                     padding-bottom: 3px;
                     img {
                         margin-left: 10px;
@@ -243,10 +270,10 @@
                         .filter-modal {
                             z-index: 10;
                             background: #ffffff;
-                            width: 710px;
+                            width: 750px;
                             position: absolute;
                             top: 0;
-                            right: 0;
+                            right: -7px;
                             padding: 15px 20px;
                             border: 2px solid #408ecd;
                             @include border-radius (20px);
@@ -309,18 +336,18 @@
         background: #f7fafb;
         overflow-x: hidden;
         border-top: 1px solid #d5d5d5;
+        z-index: 50;
         .filter-top {
             border-bottom: 1px solid #d5d5d5;
             padding: 10px 20px 15px;
             .search-container {
-                padding-bottom: 15px;
-                border-bottom: 1px solid #d5d5d5;
                 @include clearfix;
             }
             .left {
                 width: 50%;
                 float: left;
                 padding-top: 16px;
+            }
                 .search-holder {
                     padding: 5px;
                     border: 1px solid #d2d2d2;
@@ -351,7 +378,6 @@
                         right: 15px;
                     }
                 }
-            }
             .right {
                 width: 50%;
                 float: right;
@@ -365,8 +391,8 @@
                 }
                 .question {
                     position: absolute;
-                    right: 0;
-                    bottom: 0;
+                    right: -5px;
+                    bottom: 2px;
                     border: none;
                 }
                 .check {
@@ -405,7 +431,7 @@
                         margin-bottom: 10px;
                         color: #303030;
                     }
-                    .more-holder {
+                    .filter-more {
                         padding-left: 23px;
                         a {
                             font-size: 12px;
@@ -441,7 +467,7 @@
                     float: left;
                     img {
                         width: 100%;
-                        height: 208px;
+                        height: 160px;
                         @include border-radius (8px);
                     }
                 }
@@ -449,7 +475,7 @@
                     width: 250px;
                     float: right;
                     margin-right: 12px;
-                    min-height: 208px;
+                    min-height: 160px;
                     position: relative;
                     padding-bottom: 75px;
                     padding-top: 5px;
