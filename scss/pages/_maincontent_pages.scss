@@ -263,11 +263,13 @@
                                 font-size: 16px;
                                 font-weight: $semibold;
                                 margin-bottom: 5px;
+                                @include transition (all, 0.4s, linear);
                             }
                             p {
                                 font-size: 12px;
                                 line-height: 1.4;
                                 margin-bottom: 5px;
+                                @include transition (all, 0.4s, linear);
                             }
                             .likes {
                                 position: absolute;
@@ -320,6 +322,14 @@
                             .image-holder {
                                 img {
                                     @include scale(1.05);
+                                }
+                            }
+                            .text-holder {
+                                h5 {
+                                    font-size: 17px
+                                }
+                                p {
+                                    font-size: 13px;
                                 }
                             }
                         }

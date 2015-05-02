@@ -23,23 +23,14 @@ $(document).ready(function(){
         $('.header-visible-inner').fadeIn();
     });
 
-    $(".location-list").mCustomScrollbar({
-        scrollButtons:{
-                enable:true
-            }
+    $('.header-location').hide();
+    $('.header-visible #locationOpen').click(function(){
+        $('.header-location').slideDown();
+        $('.header-visible-inner').fadeOut();
     });
-    $(".header-visible #locationToggle").click(function(){
-        if($(".header-visible .location-list").is(":hidden")){
-            $(".header-visible .location-list").fadeIn();
-        }
-        else{
-            $(".header-visible .location-list").fadeOut();
-        }
-    });
-    $("*").click(function(e){
-        if($(e.target).closest(".header-visible #locationToggle").length==0 && $(e.target).closest(".header-visible .location-list").length==0){
-            $(".header-visible .location-list").fadeOut();
-        }
+    $('.header-location #locationClose').click(function(){
+        $('.header-location').slideUp();
+        $('.header-visible-inner').fadeIn();
     });
 
 });

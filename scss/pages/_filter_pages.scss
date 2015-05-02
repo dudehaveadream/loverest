@@ -96,12 +96,22 @@
         }
     }
     &.map-nav {
+        padding-top: 15px;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 10;
         margin: 0;
+        .page-nav-inner {
+            &:before, &:after {
+                content: none;
+            }
+        }
+        @media #{$mobile} {
+            text-align: right;
+
+        }
     }
 }
 
@@ -326,6 +336,7 @@
 .map-section {
     padding-left: 510px;
     height: 900px;
+    min-width: 1030px;
     position: relative;
     .filter-container {
         width: 510px;
@@ -333,7 +344,6 @@
         position: absolute;
         left: 0;
         top: 0;
-        background: #f7fafb;
         overflow-x: hidden;
         border-top: 1px solid #d5d5d5;
         z-index: 50;

@@ -175,11 +175,13 @@
                   }
                 }
             }
-        }
         &:nth-child(3n+3) {
            margin-right: 0;
         }
+        }
+
         &.master-list {
+          padding-top: 15px;
           padding-bottom: 20px;
           .offer-item {
                 height: 310px;
