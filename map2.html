@@ -46,6 +46,13 @@
         });
 
 
+        $('.filter-more .filter-more-modal').hide();
+        $('.filter-more').hover(function(e){
+            $(this).find('.filter-more-modal').fadeToggle();
+            $(this).toggleClass('open');
+            e.preventDefault();
+        });
+
     });
     </script>
 
@@ -230,12 +237,6 @@
         <div class="filter-inner">
             <div class="filter-top">
                 <div class="search-container">
-                    <div class="search-holder">
-                        <input type="text" class="search" placeholder="Поиск по названию">
-                        <input type="button">
-                    </div>
-                </div>
-                <!--<div class="search-container">
                     <div class="left">
                         <div class="search-holder">
                             <input type="text" class="search" placeholder="Поиск по названию">
@@ -269,6 +270,32 @@
                         </div>
                         <div class="filter-more">
                             <a href="#" class="more">Еще →</a>
+                            <div class="filter-more-modal">
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="coffeehouse2">
+                                    <label for="coffeehouse2">Кофейни</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="bars2">
+                                    <label for="bars2">Бары</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="pizza2">
+                                    <label for="pizza2">Пиццерии</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="coffeehouse3">
+                                    <label for="coffeehouse3">Кофейни</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="bars3">
+                                    <label for="bars3">Бары</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="pizza3">
+                                    <label for="pizza3">Пиццерии</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="filter-categories-section second">
@@ -287,6 +314,32 @@
                         </div>
                         <div class="filter-more">
                             <a href="#" class="more">Еще →</a>
+                            <div class="filter-more-modal">
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="coffeehouse4">
+                                    <label for="coffeehouse4">Кофейни</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="bars4">
+                                    <label for="bars4">Бары</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="pizza4">
+                                    <label for="pizza4">Пиццерии</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="coffeehouse5">
+                                    <label for="coffeehouse5">Кофейни</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="bars5">
+                                    <label for="bars5">Бары</label>
+                                </div>
+                                <div class="checkbox-holder">
+                                    <input type="checkbox" id="pizza5">
+                                    <label for="pizza5">Пиццерии</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="filter-categories-section third">
@@ -307,7 +360,7 @@
                             <a href="#" class="more">Еще →</a>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
             <div class="filter-content">
                 <div class="filter-content-item">

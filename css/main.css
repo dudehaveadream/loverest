@@ -1008,7 +1008,8 @@ a:hover {
   margin-left: -40px;
 }
 .categories-item-inner .image-holder-eighth img {
-  margin-left: -35px;
+  margin-left: -50px;
+  margin-top: -5px;
 }
 .categories-item-inner:hover img.stat, .categories-item-inner.active img.stat {
   opacity: 0;
@@ -1628,7 +1629,7 @@ a:hover {
 }
 
 .main-content {
-  padding: 5px 0 55px;
+  padding: 5px 15px 55px;
 }
 .main-content:after {
   content: "";
@@ -1877,11 +1878,6 @@ a:hover {
   border-bottom: 1px solid #d2d2d2;
   position: relative;
   background: #ffffff;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
 }
 .main-content .content-left .developments-tabs .box.tabs-list .tabs-list-item:after {
   content: "";
@@ -1902,11 +1898,6 @@ a:hover {
 .main-content .content-left .developments-tabs .box.tabs-list .tabs-list-item .image-holder img {
   width: 100%;
   height: 106px;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
 }
 .main-content .content-left .developments-tabs .box.tabs-list .tabs-list-item .text-holder {
   width: 320px;
@@ -1919,21 +1910,11 @@ a:hover {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
 }
 .main-content .content-left .developments-tabs .box.tabs-list .tabs-list-item .text-holder p {
   font-size: 12px;
   line-height: 1.4;
   margin-bottom: 5px;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
 }
 .main-content .content-left .developments-tabs .box.tabs-list .tabs-list-item .text-holder .likes {
   position: absolute;
@@ -2039,6 +2020,10 @@ a:hover {
   font-style: italic;
   color: #303030;
   padding-left: 25px;
+}
+.main-content .sidebar-right-inner .text-holder-inner p span {
+  font-style: normal;
+  margin-left: 2px;
 }
 .main-content .sidebar-right-inner .text-holder.title p {
   font-size: 14px;
@@ -2387,6 +2372,7 @@ a:hover {
 @media only screen and (max-width: 1199px) {
   .page-nav.map-nav {
     text-align: right;
+    padding-right: 10px;
   }
 }
 
@@ -2568,6 +2554,10 @@ a:hover {
   -ms-border-radius: 15px 0 0 15px;
   border-radius: 15px 0 0 15px;
 }
+.main-content .sidebar-left .filter-list > li .sublist li > a {
+  position: relative;
+  width: 100%;
+}
 .main-content .sidebar-left .filter-list > li .sublist li a {
   display: inline-block;
   font-size: 12px;
@@ -2626,23 +2616,22 @@ a:hover {
 .main-content .sidebar-left .filter-list > li .sublist li.active {
   border-color: #408ecd;
 }
-.main-content .sidebar-left .filter-list > li .sublist li.active:after {
+.main-content .sidebar-left .filter-list > li .sublist li.active > a:after {
   content: '';
-  width: 45px;
+  width: 26px;
   height: 23px;
   background: #ffffff;
   border-top: 2px solid #408ecd;
   border-bottom: 2px solid #408ecd;
-  float: right;
-  margin-top: -4px;
-  margin-right: -57px;
-  z-index: 100;
+  position: absolute;
+  top: -8px;
+  right: -40px;
+  z-index: 20;
 }
 
 .map-section {
   padding-left: 510px;
   height: 900px;
-  min-width: 1030px;
   position: relative;
 }
 .map-section .filter-container {
@@ -2775,7 +2764,17 @@ a:hover {
   color: #303030;
 }
 .map-section .filter-container .filter-top .filter-categories-section .filter-more {
-  padding-left: 23px;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 30px 6px 10px;
+  position: relative;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  -webkit-border-radius: 20px 0 0 20px;
+  -moz-border-radius: 20px 0 0 20px;
+  -ms-border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
 }
 .map-section .filter-container .filter-top .filter-categories-section .filter-more a {
   font-size: 12px;
@@ -2785,6 +2784,39 @@ a:hover {
 .map-section .filter-container .filter-top .filter-categories-section .filter-more a:hover {
   color: #0068bc;
   border-color: transparent;
+}
+.map-section .filter-container .filter-top .filter-categories-section .filter-more.open {
+  border-left-color: #408ecd;
+  border-top-color: #408ecd;
+  border-bottom-color: #408ecd;
+}
+.map-section .filter-container .filter-top .filter-categories-section .filter-more.open:after {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  right: -3px;
+  z-index: 2000;
+}
+.map-section .filter-container .filter-top .filter-categories-section .filter-more.open a {
+  border-color: transparent;
+  color: #d89100;
+}
+.map-section .filter-container .filter-top .filter-categories-section .filter-more-modal {
+  padding: 15px 20px;
+  position: absolute;
+  left: 100%;
+  top: -100px;
+  background: #ffffff;
+  width: 160px;
+  border: 2px solid #408ecd;
+  z-index: 100;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
 }
 .map-section .filter-container .filter-top .filter-categories-section.first {
   border-right: 1px solid #d5d5d5;
@@ -2900,6 +2932,7 @@ a:hover {
 }
 .map-section #big-map {
   width: 100%;
+  min-width: 520px;
   height: 900px;
 }
 

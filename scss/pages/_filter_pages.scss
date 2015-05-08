@@ -110,6 +110,7 @@
         }
         @media #{$mobile} {
             text-align: right;
+            padding-right: 10px;
 
         }
     }
@@ -267,6 +268,20 @@
                         padding: 2px 14px 4px;
                         border: 2px solid transparent;
                         @include border-radius (15px 0 0 15px);
+                        > a {
+                            position: relative;
+                            width: 100%;
+                            // &:before {
+                            //     content: '';
+                            //     position: absolute;
+                            //     right: -10px;
+                            //     top: 0;
+                            //     width: 3px;
+                            //     height: 10px;
+                            //     background: red;
+                            //     z-index: 100;
+                            // }
+                        }
                         a {
                             display: inline-block;
                             font-size: 12px;
@@ -313,17 +328,21 @@
                         }
                         &.active {
                             border-color: #408ecd;
-                            &:after {
-                                content: '';
-                                width: 45px;
-                                height: 23px;
-                                background: #ffffff;
-                                border-top: 2px solid #408ecd;
-                                border-bottom: 2px solid #408ecd;
-                                float: right;
-                                margin-top: -4px;
-                                margin-right: -57px;
-                                z-index: 100;
+                            > a {
+
+                                &:after {
+                                    content: '';
+                                    width: 26px;
+                                    height: 23px;
+                                    background: #ffffff;
+                                    border-top: 2px solid #408ecd;
+                                    border-bottom: 2px solid #408ecd;
+                                    position: absolute;
+                                    top: -8px;
+                                    right: -40px;
+                                    z-index: 20;
+                                }
+
                             }
                         }
                     }
@@ -336,7 +355,6 @@
 .map-section {
     padding-left: 510px;
     height: 900px;
-    min-width: 1030px;
     position: relative;
     .filter-container {
         width: 510px;
@@ -442,7 +460,14 @@
                         color: #303030;
                     }
                     .filter-more {
-                        padding-left: 23px;
+                        display: inline-block;
+                        margin-left: 10px;
+                        padding: 2px 30px 6px 10px;
+                        position: relative;
+                        border-top: 2px solid transparent;
+                        border-bottom: 2px solid transparent;
+                        border-left: 2px solid transparent;
+                        @include border-radius (20px 0 0 20px);
                         a {
                             font-size: 12px;
                             color: #303030;
@@ -451,6 +476,36 @@
                                 color: #0068bc;
                                 border-color: transparent;
                             }
+                        }
+                        &.open {
+                            border-left-color: #408ecd;
+                            border-top-color: #408ecd;
+                            border-bottom-color: #408ecd;
+                            &:after {
+                                content: '';
+                                width: 4px;
+                                height: 24px;
+                                background: #ffffff;
+                                position: absolute;
+                                top: 0;
+                                right: -3px;
+                                z-index: 2000;
+                            }
+                            a {
+                                border-color: transparent;
+                                color: #d89100;
+                            }
+                        }
+                        &-modal {
+                            padding: 15px 20px;
+                            position: absolute;
+                            left: 100%;
+                            top: -100px;
+                            background: #ffffff;
+                            width: 160px;
+                            border: 2px solid #408ecd;
+                            z-index: 100;
+                            @include border-radius (20px);
                         }
                     }
                     &.first {
@@ -556,6 +611,7 @@
     }
     #big-map {
         width: 100%;
+        min-width: 520px;
         height: 900px;
     }
 }
