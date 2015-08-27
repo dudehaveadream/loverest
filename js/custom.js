@@ -1,18 +1,22 @@
 $(document).ready(function(){
 
+    // Mask func
     $("input[name='phone']").inputmask("+7(999) 999 - 99 - 99" ,{ clearMaskOnLostFocus: false });
 
+    // Go top func
     $("#gotop").click(function() {
       $("html, body").animate({ scrollTop: 0 }, "slow");
       return false;
     });
 
+    // Categories toggle func
     $('.categories-holder .categories-section').hide();
     $('.categories-holder .categoriesToggle').click(function(){
         $(this).toggleClass("open");
         $('.categories-holder .categories-section').slideToggle();
     });
 
+    // Login func
     $('.header-login').hide();
     $('.header-visible #loginOpen').click(function(){
         $('.header-login').slideDown();
